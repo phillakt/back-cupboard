@@ -1,0 +1,24 @@
+/*
+Theme Name: Theme cupboard
+Author: hard-phillakt@mail.ru
+*/
+
+
+
+/* Memu */
+
+#menu-menu-sticky li {
+
+}
+
+#menu-menu-sticky li a {
+    color: #fff !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    transition: all .3s ease-in-out !important;
+}
+
+/* Memu end*/
+
+
