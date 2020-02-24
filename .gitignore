@@ -1,0 +1,4 @@
+#ignore files and folder
+/wp-config.php
+/wp-admin
+/wp-includes
