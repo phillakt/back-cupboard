@@ -1,5 +1,5 @@
-<?php get_header(); ?>
 
+<?php get_header(); ?>
 
 <!-- ############# Menu-sticky ############### -->
 
@@ -51,37 +51,31 @@
                                 </span>
                     </div>
 
-
                     <div class="menu-drop pl-30 pr-30 pt-30 pb-30">
-                        <ul class="fai-s">
-                            <li class="mr-40">
-                                <a href="#!" class="link link-menu">Гланая</a>
-                            </li>
-                            <li class="menu-dropdown mr-40">
-                                <a href="#!" class="link link-menu link-menu__drop">Каталог</a>
 
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Кухни</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Межкомнатные
-                                            перегородки</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Гардеробные
-                                            комнаты</a>
-                                    </li>
-                                </ul>
+                        <?php
 
-                            </li>
-                            <li class="mr-40">
-                                <a href="#!" class="link link-menu">О нас</a>
-                            </li>
-                            <li class="mr-40">
-                                <a href="#!" class="link link-menu">Акции</a>
-                            </li>
-                        </ul>
+                        wp_nav_menu([
+                            'theme_location' => '',
+                            'menu' => 'menu-sticky',
+                            'container' => 'div',
+                            'container_class' => '',
+                            'container_id' => '',
+                            'menu_class' => 'menu',
+                            'menu_id' => '',
+                            'echo' => true,
+                            'fallback_cb' => 'wp_page_menu',
+                            'before' => '',
+                            'after' => '',
+                            'link_before' => '',
+                            'link_after' => '',
+                            'items_wrap' => '<ul id="%1$s" class="fai-s %2$s">%3$s</ul>',
+                            'depth' => 0,
+                            'walker' => '',
+                        ]);
+
+                        ?>
+
                     </div>
 
                     <!-- </div> -->
@@ -161,50 +155,72 @@
 
 
                     <div class="menu-drop-hamburger">
-                                <span class="c-white">
-                                    Меню
-                                </span>
-                                <span class="pl-10 c-white">
-                                    <i class="fas fa-bars"></i>
-                                </span>
+                        <span class="c-white">
+                            Меню
+                        </span>
+                        <span class="pl-10 c-white">
+                            <i class="fas fa-bars"></i>
+                        </span>
                     </div>
 
                     <div class="menu-drop pl-30 pr-30 pt-20 pb-20">
-                        <ul class="fai-s">
-                            <li class="mr-40">
-                                <a href="#!" class="link link-menu">Гланая</a>
-                            </li>
-                            <li class="menu-dropdown mr-40">
-                                <a href="#!" class="link link-menu link-menu__drop">Каталог</a>
+                        <?php
 
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Кухни</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Межкомнатные
-                                            перегородки</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Гардеробные
-                                            комнаты</a>
-                                    </li>
-                                </ul>
+                        wp_nav_menu([
+                            'theme_location' => '',
+                            'menu' => 'menu-sticky',
+                            'container' => 'div',
+                            'container_class' => '',
+                            'container_id' => '',
+                            'menu_class' => 'menu',
+                            'menu_id' => '',
+                            'echo' => true,
+                            'fallback_cb' => 'wp_page_menu',
+                            'before' => '',
+                            'after' => '',
+                            'link_before' => '',
+                            'link_after' => '',
+                            'items_wrap' => '<ul id="%1$s" class="fai-s %2$s">%3$s</ul>',
+                            'depth' => 0,
+                            'walker' => '',
+                        ]);
 
-                            </li>
-                            <li class="mr-40">
-                                <a href="#!" class="link link-menu">О нас</a>
-                            </li>
-                            <li class="mr-40">
-                                <a href="#!" class="link link-menu">Акции</a>
-                            </li>
-                        </ul>
+                        ?>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+<?php
+
+// создаем экземпляр
+$my_posts = new WP_Query;
+
+// делаем запрос
+$myposts = $my_posts->query(
+    [
+        'post_type' => 'catalog_item',
+//                'name' => 'kuhni'
+    ]
+);
+//        post_type 1
+//        post_name 2
+//         обрабатываем результат
+foreach ($myposts as $pst): ?>
+
+<!--                --><?php //debug($pst); ?>
+<!--                --><?php //echo $pst->post_name . '<br>'; ?>
+
+    <!--            --><?php //echo get_field('catalog_item_title', $pst->ID); ?>
+    <!---->
+    <!--            --><?php //echo get_field('catalog_item_img-1', $pst->ID); ?>
+
+<?php endforeach; ?>
+
 
 <section class="catalog">
     <div class="container">
@@ -254,16 +270,19 @@
             </div>
         </div>
 
+
         <div class="row">
             <div class="col-lg-4 offset-lg-1">
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
-                         style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/1.png) no-repeat;">
+                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'shkafy-kupe'], 'catalog_item_img-1'); ?>) no-repeat;">
                         <div class="catalog__header pt-30 pl-20">
-                            <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-kupe']) ?>" class="link link-catalog">
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'shkafy-kupe'], 'catalog_item_title'); ?>
+                            </a>
                         </div>
                         <div class="catalog__footer pt-30 pl-30 pb-30">
-                            <a href="#!" class="arrow">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-kupe']) ?>" class="arrow">
                                 <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                      alt="arrow">
                             </a>
@@ -277,12 +296,14 @@
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/2.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'prihozhie'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'prihozhie']) ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'prihozhie'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'prihozhie']) ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -294,12 +315,14 @@
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/3.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'komody'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'komody']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'komody'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'komody']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -313,12 +336,14 @@
                     <div class="col-lg-12">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/4.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'kuhni'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'kuhni']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'kuhni'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'kuhni']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -337,12 +362,14 @@
                     <div class="col-lg-12">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/5.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -356,12 +383,14 @@
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/7.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -373,12 +402,14 @@
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/8.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -394,12 +425,14 @@
             <div class="col-lg-4">
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
-                         style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/6.png ) no-repeat;">
+                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto'], 'catalog_item_img-1'); ?>) no-repeat;">
                         <div class="catalog__header pt-30 pl-20">
-                            <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto']); ?>" class="link link-catalog">
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto'], 'catalog_item_title'); ?>
+                            </a>
                         </div>
                         <div class="catalog__footer pt-30 pl-30 pb-30">
-                            <a href="#!" class="arrow">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto']); ?>" class="arrow">
                                 <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                      alt="arrow">
                             </a>
@@ -413,12 +446,14 @@
             <div class="col-lg-4 offset-lg-1">
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
-                         style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/9.png) no-repeat;">
+                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'detskie'], 'catalog_item_img-1'); ?>) no-repeat;">
                         <div class="catalog__header pt-30 pl-20">
-                            <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'detskie']); ?>" class="link link-catalog">
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'detskie'], 'catalog_item_title'); ?>
+                            </a>
                         </div>
                         <div class="catalog__footer pt-30 pl-30 pb-30">
-                            <a href="#!" class="arrow">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'detskie']); ?>" class="arrow">
                                 <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                      alt="arrow">
                             </a>
@@ -432,12 +467,14 @@
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/10.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'gostinye'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'gostinye']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'gostinye'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'gostinye']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -449,12 +486,14 @@
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/11.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'biblioteki'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'biblioteki']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'biblioteki'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'biblioteki']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -468,12 +507,14 @@
                     <div class="col-lg-12">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?= get_template_directory_uri() ?>/img/catalog/items/12.png ) no-repeat;">
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'realizovannye-proekty'], 'catalog_item_img-1'); ?>) no-repeat;">
                                 <div class="catalog__header pt-30 pl-20">
-                                    <a href="#!" class="link link-catalog">Шкафы-купе</a>
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'realizovannye-proekty']); ?>" class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'realizovannye-proekty'], 'catalog_item_title'); ?>
+                                    </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="#!" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'realizovannye-proekty']); ?>" class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -484,6 +525,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 

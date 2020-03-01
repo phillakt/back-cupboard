@@ -15,3 +15,12 @@ define( 'WP_USE_THEMES', true );
 
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+
+
+function debug($arg){
+
+    echo '<pre>';
+    echo print_r($arg);
+    echo '</pre>';
+
+}

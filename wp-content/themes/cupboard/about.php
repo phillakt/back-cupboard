@@ -17,12 +17,14 @@ Template Name: Шаблон "О нас"
                         <div class="sticky-search fjc-s fai-c">
                             <div class="mr-30">
                                 <a href="#!" class="icon-search">
-                                    <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_search.svg" alt="ico_search">
+                                    <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_search.svg"
+                                         alt="ico_search">
                                 </a>
                             </div>
                             <a href="#!" class="fjc-sb link link__default">
                                 <div class="mr-20">
-                                    <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg" alt="ico_search">
+                                    <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
+                                         alt="ico_search">
                                 </div>
                                 <div class="link link__default link__default_w pt-5 fs-14">
                                     +7 (000) 000 0000
@@ -32,7 +34,8 @@ Template Name: Шаблон "О нас"
                             <!-- Search form start -->
                             <div class="box-search display-none">
                                 <label class="search-ico" for="menu-search-sticky">
-                                    <img src="<?= get_template_directory_uri() ?>/img/menu/search.svg" alt="search"></label>
+                                    <img src="<?= get_template_directory_uri() ?>/img/menu/search.svg"
+                                         alt="search"></label>
                                 <input id="menu-search-sticky" class="menu-search pl-50 pr-10 pt-5 pb-5 "
                                        type="text" placeholder="Поиск">
                                 <span class="search-close">×</span>
@@ -62,57 +65,25 @@ Template Name: Шаблон "О нас"
                             <?php
 
                             wp_nav_menu([
-                                'theme_location'  => '',
-                                'menu'            => 'menu-sticky',
-                                'container'       => 'div',
+                                'theme_location' => '',
+                                'menu' => 'menu-sticky',
+                                'container' => 'div',
                                 'container_class' => '',
-                                'container_id'    => '',
-                                'menu_class'      => 'menu',
-                                'menu_id'         => '',
-                                'echo'            => true,
-                                'fallback_cb'     => 'wp_page_menu',
-                                'before'          => '',
-                                'after'           => '',
-                                'link_before'     => '',
-                                'link_after'      => '',
-                                'items_wrap'      => '<ul id="%1$s" class="fai-s %2$s">%3$s</ul>',
-                                'depth'           => 0,
-                                'walker'          => '',
+                                'container_id' => '',
+                                'menu_class' => 'menu',
+                                'menu_id' => '',
+                                'echo' => true,
+                                'fallback_cb' => 'wp_page_menu',
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'items_wrap' => '<ul id="%1$s" class="fai-s %2$s">%3$s</ul>',
+                                'depth' => 0,
+                                'walker' => '',
                             ]);
 
                             ?>
-
-
-<!--                            <ul class="fai-s">-->
-<!--                                <li class="mr-40">-->
-<!--                                    <a href="#!" class="link link-menu">Гланая</a>-->
-<!--                                </li>-->
-<!--                                <li class="menu-dropdown mr-40">-->
-<!--                                    <a href="#!" class="link link-menu link-menu__drop">Каталог</a>-->
-<!---->
-<!--                                    <ul class="submenu">-->
-<!--                                        <li>-->
-<!--                                            <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Кухни</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Межкомнатные-->
-<!--                                                перегородки</a>-->
-<!--                                        </li>-->
-<!--                                        <li>-->
-<!--                                            <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Гардеробные-->
-<!--                                                комнаты</a>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!---->
-<!--                                </li>-->
-<!--                                <li class="mr-40">-->
-<!--                                    <a href="#!" class="link link-menu">О нас</a>-->
-<!--                                </li>-->
-<!--                                <li class="mr-40">-->
-<!--                                    <a href="#!" class="link link-menu">Акции</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-
 
                         </div>
 
@@ -138,73 +109,26 @@ Template Name: Шаблон "О нас"
                             в Белгороде по индивидуальным проектам, в частности, мы разрабатываем:
                         </div>
 
+                        <?php
+                        
+                        $my_posts = new WP_Query;
+
+                        $myposts = $my_posts->query(['post_type' => 'catalog_item']); ?>
+
                         <div class="about-links">
                             <!-- line-links 1 -->
                             <div class="mt-20 mb-20">
-                                <ul class="ui-ul fjc-sb">
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Шкафы-купе</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Прихожие</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Комоды</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Кухни</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Межкомнатные
-                                            перегородки</a>
-                                    </li>
-                                </ul>
-                            </div>
+                                <ul class="ui-ul about-links__ul">
+                                    <?php foreach ($myposts as $pst): ?>
 
-                            <!-- line-links 2 -->
-                            <div class="mt-20 mb-20">
-                                <ul class="ui-ul fjc-sb">
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Гардеробные
-                                            комнаты</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="fs-14 fw-700 link link__default link__default_r">Шкафы
-                                            распашные</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Домашнее рабочее
-                                            место</a>
-                                    </li>
-                                </ul>
-                            </div>
+                                        <li>
+                                            <a href="<?= home_url(); ?>/<?= $pst->post_type ?>/<?= $pst->post_name; ?>"
+                                               class="fs-14 fw-700 link link__default link__default_r">
+                                                <?= $pst->post_title; ?>
+                                            </a>
+                                        </li>
 
-                            <!-- line-links 3 -->
-                            <div class="mt-20 mb-20">
-                                <ul class="ui-ul fjc-sb">
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Детские</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Гостиные</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!"
-                                           class="fs-14 fw-700 link link__default link__default_r">Библиотеки</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="fs-14 fw-700 link link__default link__default_r">Готовые
-                                            решения</a>
-                                    </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>

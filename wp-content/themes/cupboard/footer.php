@@ -211,71 +211,71 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 offset-lg-1">
-                <ul class="ui-ul">
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Главная</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Шкафы-купе</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Прихожие</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Комоды</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Кухни</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Межкомнатные
-                            перегородки</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Гардеробные
-                            комнаты</a>
-                    </li>
+
+                <ul class="ui-ul footer-link">
+                    <?php
+                    $args = array(
+                        'depth'        => 0,
+                        'show_date'    => '',
+                        'date_format'  => get_option('date_format'),
+                        'child_of'     => 0,
+                        'exclude'      => '',
+                        'exclude_tree' => '',
+                        'include'      => '',
+                        'title_li'     => '',
+                        'echo'         => 1,
+                        'authors'      => '',
+                        'sort_column'  => 'menu_order, post_title',
+                        'sort_order'   => 'ASC',
+                        'link_before'  => '',
+                        'link_after'   => '',
+                        'meta_key'     => '',
+                        'meta_value'   => '',
+                        'number'       => '',
+                        'offset'       => '',
+                        'walker'       => '',
+                        'post_type'    => 'page', // из функции get_pages()
+                    );
+
+                    wp_list_pages($args); ?>
                 </ul>
+
             </div>
 
             <div class="col-lg-3 col-md-3 col-sm-3">
-                <ul class="ui-ul" link link__default link__default_w>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Шкафы
-                            распашные</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Домашнее рабочее
-                            место</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Детские</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Гостиные</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Библиотеки</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Готовые
-                            решения</a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="col-lg-2 col-md-2 col-sm-2">
+                <?php
+
+                $my_posts = new WP_Query;
+
+                $myposts = $my_posts->query(['post_type' => 'catalog_item']); ?>
+
                 <ul class="ui-ul">
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">О нас</a>
-                    </li>
-                    <li class="mb-10">
-                        <a href="#!" class="c-white fs-14 link link__default link__default_w">Партнеры</a>
-                    </li>
+
+                    <?php foreach ($myposts as $pst): ?>
+
+                        <li class="mb-5">
+                            <a href="<?= home_url(); ?>/<?= $pst->post_type ?>/<?= $pst->post_name; ?>"
+                               class="c-white fs-14 link link__default link__default_w">
+                                <?= $pst->post_title; ?>
+                            </a>
+                        </li>
+
+                    <?php endforeach; ?>
                 </ul>
+
             </div>
 
             <div class="col-lg-2 col-md-2 col-sm-2">
+
+                <ul class="ui-ul">
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2">
+
                 <ul class="ui-ul">
                     <li class="mb-10">
                         <img src="<?= get_template_directory_uri() ?>/img/icons/footer/ico_vk.svg" alt="ico_vk">
@@ -296,6 +296,7 @@
                         </a>
                     </li>
                 </ul>
+
             </div>
         </div>
     </div>
@@ -317,9 +318,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="menu-mobile mt-100">
-                            <span class="mobile-close c-white">
-                                <i class="fas fa-times"></i>
-                            </span>
+                    <span class="mobile-close c-white">
+                        <i class="fas fa-times"></i>
+                    </span>
 
                     <div class="fjc-s ml-60">
                         <div class="mr-20">
@@ -329,7 +330,6 @@
                             +7 (000) 000 0000
                         </div>
                     </div>
-
 
 
                     <?php
@@ -354,36 +354,6 @@
                     ]);
 
                     ?>
-
-<!--                    <ul class="ffd-column ml-60 mt-60">-->
-<!--                        <li class="mr-40 mb-40">-->
-<!--                            <a href="#!" class="link link-menu">Гланая</a>-->
-<!--                        </li>-->
-<!--                        <li class="menu-dropdown mr-40 mb-40">-->
-<!--                            <a href="#!" class="link link-menu link-menu__drop">Каталог</a>-->
-<!---->
-<!--                            <ul class="submenu">-->
-<!--                                <li>-->
-<!--                                    <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Кухни</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Межкомнатные-->
-<!--                                        перегородки</a>-->
-<!--                                </li>-->
-<!--                                <li>-->
-<!--                                    <a href="#!" class="fjc-s c-white fs-14 pt-10 pb-10 pl-20">Гардеробные-->
-<!--                                        комнаты</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!---->
-<!--                        </li>-->
-<!--                        <li class="mr-40 mb-40">-->
-<!--                            <a href="#!" class="link link-menu">О нас</a>-->
-<!--                        </li>-->
-<!--                        <li class="mr-40 mb-40">-->
-<!--                            <a href="#!" class="link link-menu">Акции</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
 
                 </div>
             </div>
