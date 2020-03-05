@@ -20,12 +20,12 @@
             outline: none;
             background: url(<?= get_template_directory_uri() ?>/img/main-slider/ico_arrow_prev.svg) !important;
         }
-
-
+        
         .products .products-line {
             background: url(<?= get_template_directory_uri() ?>/img/products/line.svg) no-repeat;
             height: 1px;
             background-size: contain; }
+
         .products .products-line .button {
             margin-top: -20px; }
     </style>

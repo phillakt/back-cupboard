@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0416c2ed-9df3-4f4c-a641-831593c0dbb4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/full-catalog/section_8/Group 18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/1 (2).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/img/catalog/items/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2020/02/2-5-150x150.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2020/02/2-5-300x300.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2020/02/2-5.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/404.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/404.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/about.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/about.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/card.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/card.php" />
@@ -14,8 +27,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/js/main.js" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/products.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/products.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/stock.php" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/stock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cupboard/style/main.css" afterPath="$PROJECT_DIR$/wp-content/themes/cupboard/style/main.css" />
     </list>
     <ignored path="cupboard.iws" />
@@ -38,87 +53,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="268" column="22" selection-start-line="268" selection-start-column="22" selection-end-line="268" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#3;n#!!top" expanded="true" />
-                <marker date="1583061111191" expanded="true" signature="19060:19130" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="19801:19840" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="20014:20084" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="20490:20560" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="21241:21280" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="21453:21515" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="21903:21965" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="22606:22645" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="22801:22863" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="23217:23279" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="23951:23990" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="24155:24225" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="24613:24683" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="25343:25382" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="25549:25619" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="26011:26081" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="26801:26840" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="27018:27088" placeholder="..." />
-                <marker date="1583061111191" expanded="true" signature="27502:27572" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="118" column="146" selection-start-line="118" selection-start-column="146" selection-end-line="118" selection-end-column="146" />
-              <folding>
-                <element signature="e#6#77#0#PHP" expanded="true" />
-                <element signature="n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <marker date="1583081858759" expanded="false" signature="7645:9268" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="card.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/card.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="444">
+              <caret line="183" column="92" selection-start-line="183" selection-start-column="92" selection-end-line="183" selection-end-column="92" />
               <folding>
                 <element signature="e#6#84#0#PHP" expanded="true" />
-                <element signature="n#section#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <marker date="1583088377783" expanded="true" signature="5166:8205" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="5239:6558" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="5261:6539" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="5515:5954" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="5572:5927" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="6627:8190" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="6686:7484" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="6735:7263" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="7547:8171" placeholder="..." />
-                <marker date="1583088377783" expanded="true" signature="7596:8148" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="224" column="43" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
+            <state relative-caret-position="716">
+              <caret line="373" column="0" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
               <folding>
                 <element signature="n#section#0;n#!!top" expanded="false" />
+                <element signature="e#2155#2157#0#PHP" expanded="true" />
                 <element signature="n#section#1;n#!!top" expanded="false" />
-                <element signature="n#section#4;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="false" />
+                <element signature="n#section#2;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,13 +86,19 @@
       <file leaf-file-name="catalog.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/catalog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="442">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding>
                 <element signature="e#6#43#0#PHP" expanded="true" />
-                <element signature="e#131#4037#0#HTML" expanded="false" />
-                <marker date="1583070604566" expanded="true" signature="14250:14280" placeholder="..." />
-                <marker date="1583070604566" expanded="true" signature="14794:14824" placeholder="..." />
+                <element signature="e#7250#9966#0#HTML" expanded="false" />
+                <element signature="e#7689#7748#0#HTML" expanded="true" />
+                <element signature="e#8549#8607#0#HTML" expanded="true" />
+                <element signature="e#9672#9730#0#HTML" expanded="true" />
+                <element signature="e#10876#10934#0#HTML" expanded="true" />
+                <element signature="e#11999#12057#0#HTML" expanded="true" />
+                <element signature="e#12516#12574#0#HTML" expanded="true" />
+                <marker date="1583435502473" expanded="true" signature="12006:12026" placeholder="..." />
+                <marker date="1583435502473" expanded="true" signature="12523:12543" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -142,23 +107,32 @@
       <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/about.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="62" column="71" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="71" />
+            <state relative-caret-position="646">
+              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
               <folding>
                 <element signature="e#6#41#0#PHP" expanded="true" />
-                <element signature="e#4102#13795#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/style/main.css">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9669" column="1" selection-start-line="9669" selection-start-column="1" selection-end-line="9669" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <element signature="e#259738#261092#0" expanded="false" />
+                <element signature="n#fieldLink#0;n#Catalog#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -167,10 +141,10 @@
       <file leaf-file-name="stock.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/stock.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="308">
+              <caret line="137" column="55" selection-start-line="137" selection-start-column="55" selection-end-line="137" selection-end-column="55" />
               <folding>
-                <element signature="e#6#66#0#PHP" expanded="true" />
+                <element signature="e#6#72#0#PHP" expanded="true" />
                 <element signature="n#section#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
               </folding>
@@ -178,11 +152,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/functions.php">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/style/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="376">
+              <caret line="9738" column="14" selection-start-line="9738" selection-start-column="14" selection-end-line="9738" selection-end-column="14" />
+              <folding>
+                <element signature="e#260385#261739#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/404.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -204,21 +200,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/js/main.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cupboard/post.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/404.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/catalog.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cupboard/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/products.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/card.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/stock.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/js/main.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cupboard/about.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/products.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/catalog.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cupboard/style/main.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/card.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/index.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/404.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/stock.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cupboard/footer.php" />
       </list>
     </option>
   </component>
@@ -262,6 +258,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,8 +356,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,11 +365,11 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OSPanel\domains\cupboard\wp-content\themes\cupboard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\cupboard\back-cupboard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\cupboard\wp-content\themes\cupboard" />
     </key>
   </component>
   <component name="RunManager">
@@ -425,17 +421,19 @@
       <workItem from="1582828639988" duration="9384000" />
       <workItem from="1582997233883" duration="13310000" />
       <workItem from="1583054203459" duration="29278000" />
+      <workItem from="1583345289874" duration="10180000" />
+      <workItem from="1583427490278" duration="11219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69453000" />
+    <option name="totallyTimeSpent" value="90852000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18656716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -497,19 +495,8 @@
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583088377783" expanded="true" signature="5166:8205" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5239:6558" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5261:6539" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5515:5954" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5572:5927" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6627:8190" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6686:7484" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6735:7263" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7547:8171" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7596:8148" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -519,26 +506,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#3;n#!!top" expanded="true" />
-            <marker date="1583061111191" expanded="true" signature="19060:19130" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="19801:19840" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="20014:20084" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="20490:20560" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21241:21280" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21453:21515" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21903:21965" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="22606:22645" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="22801:22863" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="23217:23279" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="23951:23990" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="24155:24225" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="24613:24683" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="25343:25382" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="25549:25619" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="26011:26081" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="26801:26840" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="27018:27088" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="27502:27572" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <marker date="1583437851763" expanded="true" signature="27112:27182" placeholder="..." />
+            <marker date="1583437851763" expanded="true" signature="27637:27707" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -557,10 +537,6 @@
           <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
           <folding>
             <element signature="e#6#77#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583081858759" expanded="false" signature="7645:9268" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -569,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,7 +553,7 @@
         <state relative-caret-position="17">
           <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#6#72#0#PHP" expanded="true" />
             <element signature="n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
           </folding>
@@ -590,7 +565,7 @@
         <state relative-caret-position="165070">
           <caret line="9765" column="0" selection-start-line="9765" selection-start-column="0" selection-end-line="9765" selection-end-column="0" />
           <folding>
-            <element signature="e#259738#261092#0" expanded="false" />
+            <element signature="e#260385#261739#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,19 +576,8 @@
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583088377783" expanded="true" signature="5166:8205" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5239:6558" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5261:6539" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5515:5954" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5572:5927" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6627:8190" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6686:7484" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6735:7263" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7547:8171" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7596:8148" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -624,7 +588,6 @@
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="96" selection-end-column="58" />
           <folding>
             <element signature="e#6#41#0#PHP" expanded="true" />
-            <element signature="e#4102#13795#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -633,7 +596,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="n#fieldLink#0;n#Catalog#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -643,9 +608,15 @@
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="95" selection-end-column="58" />
           <folding>
             <element signature="e#6#43#0#PHP" expanded="true" />
-            <element signature="e#131#4037#0#HTML" expanded="false" />
-            <marker date="1583070604566" expanded="true" signature="14250:14280" placeholder="..." />
-            <marker date="1583070604566" expanded="true" signature="14794:14824" placeholder="..." />
+            <element signature="e#7250#9966#0#HTML" expanded="false" />
+            <element signature="e#7689#7748#0#HTML" expanded="true" />
+            <element signature="e#8549#8607#0#HTML" expanded="true" />
+            <element signature="e#9672#9730#0#HTML" expanded="true" />
+            <element signature="e#10876#10934#0#HTML" expanded="true" />
+            <element signature="e#11999#12057#0#HTML" expanded="true" />
+            <element signature="e#12516#12574#0#HTML" expanded="true" />
+            <marker date="1583435502473" expanded="true" signature="12006:12026" placeholder="..." />
+            <marker date="1583435502473" expanded="true" signature="12523:12543" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -655,26 +626,19 @@
         <state relative-caret-position="1598">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#3;n#!!top" expanded="true" />
-            <marker date="1583061111191" expanded="true" signature="19060:19130" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="19801:19840" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="20014:20084" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="20490:20560" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21241:21280" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21453:21515" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21903:21965" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="22606:22645" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="22801:22863" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="23217:23279" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="23951:23990" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="24155:24225" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="24613:24683" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="25343:25382" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="25549:25619" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="26011:26081" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="26801:26840" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="27018:27088" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="27502:27572" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <marker date="1583437851763" expanded="true" signature="27112:27182" placeholder="..." />
+            <marker date="1583437851763" expanded="true" signature="27637:27707" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -685,10 +649,6 @@
           <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
           <folding>
             <element signature="e#6#77#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583081858759" expanded="false" signature="7645:9268" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -698,7 +658,7 @@
         <state relative-caret-position="51">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#6#72#0#PHP" expanded="true" />
             <element signature="n#section#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
           </folding>
@@ -710,7 +670,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#259738#261092#0" expanded="false" />
+            <element signature="e#260385#261739#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -719,7 +679,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#fieldLink#0;n#Catalog#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -729,7 +691,6 @@
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="82" selection-end-column="30" />
           <folding>
             <element signature="e#6#41#0#PHP" expanded="true" />
-            <element signature="e#4102#13795#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -747,9 +708,15 @@
           <caret line="658" column="155" selection-start-line="658" selection-start-column="155" selection-end-line="658" selection-end-column="155" />
           <folding>
             <element signature="e#6#43#0#PHP" expanded="true" />
-            <element signature="e#131#4037#0#HTML" expanded="false" />
-            <marker date="1583070604566" expanded="true" signature="14250:14280" placeholder="..." />
-            <marker date="1583070604566" expanded="true" signature="14794:14824" placeholder="..." />
+            <element signature="e#7250#9966#0#HTML" expanded="false" />
+            <element signature="e#7689#7748#0#HTML" expanded="true" />
+            <element signature="e#8549#8607#0#HTML" expanded="true" />
+            <element signature="e#9672#9730#0#HTML" expanded="true" />
+            <element signature="e#10876#10934#0#HTML" expanded="true" />
+            <element signature="e#11999#12057#0#HTML" expanded="true" />
+            <element signature="e#12516#12574#0#HTML" expanded="true" />
+            <marker date="1583435502473" expanded="true" signature="12006:12026" placeholder="..." />
+            <marker date="1583435502473" expanded="true" signature="12523:12543" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -758,7 +725,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6018">
           <caret line="354" column="0" selection-start-line="354" selection-start-column="0" selection-end-line="354" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="e#2155#2157#0#PHP" expanded="true" />
+            <element signature="n#section#1;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -797,19 +770,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583088377783" expanded="true" signature="5166:8205" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5239:6558" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5261:6539" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5515:5954" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5572:5927" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6627:8190" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6686:7484" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6735:7263" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7547:8171" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7596:8148" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -849,20 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="14247" column="48" selection-start-line="14247" selection-start-column="48" selection-end-line="14247" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -886,185 +834,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/twentynineteen/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#315#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/_products.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/_products.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/_catalog.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/_catalog.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4063">
-          <caret line="241" column="30" selection-start-line="241" selection-start-column="30" selection-end-line="241" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="242284">
+          <caret line="14264" column="40" selection-start-line="14264" selection-start-column="40" selection-end-line="14264" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="268" column="22" selection-start-line="268" selection-start-column="22" selection-end-line="268" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="526" column="0" selection-start-line="526" selection-start-column="0" selection-end-line="526" selection-end-column="0" />
           <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#!!top" expanded="false" />
+            <element signature="n#section#3;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#3;n#!!top" expanded="true" />
-            <marker date="1583061111191" expanded="true" signature="19060:19130" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="19801:19840" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="20014:20084" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="20490:20560" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21241:21280" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21453:21515" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="21903:21965" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="22606:22645" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="22801:22863" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="23217:23279" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="23951:23990" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="24155:24225" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="24613:24683" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="25343:25382" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="25549:25619" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="26011:26081" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="26801:26840" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="27018:27088" placeholder="..." />
-            <marker date="1583061111191" expanded="true" signature="27502:27572" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#section#3;n#!!top" expanded="true" />
+            <marker date="1583437851763" expanded="true" signature="27112:27182" placeholder="..." />
+            <marker date="1583437851763" expanded="true" signature="27637:27707" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="118" column="146" selection-start-line="118" selection-start-column="146" selection-end-line="118" selection-end-column="146" />
+        <state relative-caret-position="801">
+          <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
           <folding>
             <element signature="e#6#77#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583081858759" expanded="false" signature="7645:9268" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/card.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="444">
+          <caret line="183" column="92" selection-start-line="183" selection-start-column="92" selection-end-line="183" selection-end-column="92" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1583088377783" expanded="true" signature="5166:8205" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5239:6558" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5261:6539" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5515:5954" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="5572:5927" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6627:8190" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6686:7484" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="6735:7263" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7547:8171" placeholder="..." />
-            <marker date="1583088377783" expanded="true" signature="7596:8148" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="224" column="43" selection-start-line="224" selection-start-column="43" selection-end-line="224" selection-end-column="43" />
-          <folding>
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#section#1;n#!!top" expanded="false" />
-            <element signature="n#section#4;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/catalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
-          <folding>
-            <element signature="e#6#43#0#PHP" expanded="true" />
-            <element signature="e#131#4037#0#HTML" expanded="false" />
-            <marker date="1583070604566" expanded="true" signature="14250:14280" placeholder="..." />
-            <marker date="1583070604566" expanded="true" signature="14794:14824" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/about.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="71" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="71" />
-          <folding>
-            <element signature="e#6#41#0#PHP" expanded="true" />
-            <element signature="e#4102#13795#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/style/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9669" column="1" selection-start-line="9669" selection-start-column="1" selection-end-line="9669" selection-end-column="1" />
+        <state relative-caret-position="376">
+          <caret line="9738" column="14" selection-start-line="9738" selection-start-column="14" selection-end-line="9738" selection-end-column="14" />
           <folding>
-            <element signature="e#259738#261092#0" expanded="false" />
+            <element signature="e#260385#261739#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/stock.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/404.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-            <element signature="n#section#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="e#6#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="n#fieldLink#0;n#Catalog#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/stock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="137" column="55" selection-start-line="137" selection-start-column="55" selection-end-line="137" selection-end-column="55" />
+          <folding>
+            <element signature="e#6#72#0#PHP" expanded="true" />
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/catalog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#6#43#0#PHP" expanded="true" />
+            <element signature="e#7250#9966#0#HTML" expanded="false" />
+            <element signature="e#7689#7748#0#HTML" expanded="true" />
+            <element signature="e#8549#8607#0#HTML" expanded="true" />
+            <element signature="e#9672#9730#0#HTML" expanded="true" />
+            <element signature="e#10876#10934#0#HTML" expanded="true" />
+            <element signature="e#11999#12057#0#HTML" expanded="true" />
+            <element signature="e#12516#12574#0#HTML" expanded="true" />
+            <marker date="1583435502473" expanded="true" signature="12006:12026" placeholder="..." />
+            <marker date="1583435502473" expanded="true" signature="12523:12543" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cupboard/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="373" column="0" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+          <folding>
+            <element signature="n#section#0;n#!!top" expanded="false" />
+            <element signature="e#2155#2157#0#PHP" expanded="true" />
+            <element signature="n#section#1;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 <!-- ############# Menu-sticky ############### -->
@@ -21,9 +20,9 @@
                                 <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                      alt="ico_search">
                             </div>
-                            <div class="link link__default link__default_w pt-5 fs-14">
-                                +7 (000) 000 0000
-                            </div>
+                            <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                +7 (4722) 373-543
+                            </a>
                         </a>
                         <!-- Search form start -->
                         <div class="box-search display-none">
@@ -37,7 +36,7 @@
                     </div>
 
                     <div class="sticky-logo fjc-c">
-                        <a href="#!">
+                        <a href="/">
                             <img src="<?= get_template_directory_uri() ?>/img/logo-white.svg" alt="logo-white">
                         </a>
                     </div>
@@ -92,7 +91,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="fjc-c pt-20 pb-20">
-                    <img src="<?= get_template_directory_uri() ?>/img/logo/logo.svg" alt="logo">
+                    <a href="/">
+                        <img src="<?= get_template_directory_uri() ?>/img/logo/logo.svg" alt="logo">
+                    </a>
                 </div>
             </div>
         </div>
@@ -101,21 +102,21 @@
 
 <section class="main-slider">
     <div id="main-slider" class="owl-carousel owl-theme">
-        <div class="item">
-            <div class="item__h500"
-                 style="background: url(<?= get_template_directory_uri() ?>/img/main-slider/items/item-1.png) no-repeat;">
+
+        <?php
+        $my_posts = new WP_Query;
+        $myposts = $my_posts->query(['post_type' => 'slider']); ?>
+
+        <?php foreach ($myposts as $pst): ?>
+
+            <div class="item">
+                <div class="item__h500"
+                     style="background: url(<?= get_field('images', $pst->ID); ?>) no-repeat;">
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <div class="item__h500"
-                 style="background: url(<?= get_template_directory_uri() ?>/img/main-slider/items/item-1.png) no-repeat;">
-            </div>
-        </div>
-        <div class="item">
-            <div class="item__h500"
-                 style="background: url(<?= get_template_directory_uri() ?>/img/main-slider/items/item-1.png) no-repeat;">
-            </div>
-        </div>
+
+        <?php endforeach; ?>
+
     </div>
 </section>
 
@@ -137,9 +138,9 @@
                                 <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                      alt="ico_search">
                             </div>
-                            <div class="link link__default link__default_w pt-5 fs-14">
-                                +7 (000) 000 0000
-                            </div>
+                            <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                +7 (4722) 373-543
+                            </a>
                         </a>
                     </div>
 
@@ -194,39 +195,10 @@
     </div>
 </section>
 
-
-<?php
-
-// создаем экземпляр
-$my_posts = new WP_Query;
-
-// делаем запрос
-$myposts = $my_posts->query(
-    [
-        'post_type' => 'catalog_item',
-//                'name' => 'kuhni'
-    ]
-);
-//        post_type 1
-//        post_name 2
-//         обрабатываем результат
-foreach ($myposts as $pst): ?>
-
-<!--                --><?php //debug($pst); ?>
-<!--                --><?php //echo $pst->post_name . '<br>'; ?>
-
-    <!--            --><?php //echo get_field('catalog_item_title', $pst->ID); ?>
-    <!---->
-    <!--            --><?php //echo get_field('catalog_item_img-1', $pst->ID); ?>
-
-<?php endforeach; ?>
-
-
 <section class="catalog">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
-
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="mt-40">
@@ -262,27 +234,28 @@ foreach ($myposts as $pst): ?>
                     </div>
 
                     <div class="col-lg-3 offset-lg-3">
-                        <div class="button button__red fjc-c fai-c pt-10 pb-10 mt-60 mb-60">
+                        <a href="/katalog/" class="button button__red fjc-c fai-c pt-10 pb-10 mt-60 mb-60">
                             В каталог
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-lg-4 offset-lg-1">
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
-                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'shkafy-kupe'], 'catalog_item_img-1'); ?>) no-repeat;">
-                        <div class="catalog__header pt-30 pl-20">
-                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-kupe']) ?>" class="link link-catalog">
-                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'shkafy-kupe'], 'catalog_item_title'); ?>
+                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'shkafy-kupe'], 'catalog_item_img-1'); ?>) no-repeat;">
+                        <div class="catalog__header pt-30 pl-30">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'shkafy-kupe']) ?>"
+                               class="link link-catalog">
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'shkafy-kupe'], 'catalog_item_title'); ?>
                             </a>
                         </div>
                         <div class="catalog__footer pt-30 pl-30 pb-30">
-                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-kupe']) ?>" class="arrow">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'shkafy-kupe']) ?>"
+                               class="arrow">
                                 <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                      alt="arrow">
                             </a>
@@ -294,16 +267,18 @@ foreach ($myposts as $pst): ?>
             <div class="col-lg-6">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="box-height-overflow-h mb-30">
+                        <div class="box-height-overflow-h mb-20">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'prihozhie'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'prihozhie']) ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'prihozhie'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'prihozhie'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'prihozhie']) ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'prihozhie'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'prihozhie']) ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'prihozhie']) ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -313,16 +288,18 @@ foreach ($myposts as $pst): ?>
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="box-height-overflow-h mb-30">
+                        <div class="box-height-overflow-h mb-20">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'komody'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'komody']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'komody'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'komody'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'komody']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'komody'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'komody']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'komody']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -336,14 +313,16 @@ foreach ($myposts as $pst): ?>
                     <div class="col-lg-12">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'kuhni'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'kuhni']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'kuhni'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'kuhni'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'kuhni']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'kuhni'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'kuhni']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'kuhni']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -357,19 +336,20 @@ foreach ($myposts as $pst): ?>
 
         <div class="row">
             <div class="col-lg-6 offset-lg-1">
-
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="box-height-overflow-h mb-30">
+                        <div class="box-height-overflow-h mb-20">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'mezhkomnatnye-peregorodki'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'mezhkomnatnye-peregorodki']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'mezhkomnatnye-peregorodki'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'mezhkomnatnye-peregorodki']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'mezhkomnatnye-peregorodki']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -383,33 +363,39 @@ foreach ($myposts as $pst): ?>
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'shkafy-raspashnye'], 'catalog_item_img-1'); ?>) no-repeat;">
+
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'shkafy-raspashnye']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'shkafy-raspashnye'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'garderobnye-komnaty']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'shkafy-raspashnye']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'domashnee-rabochee-mesto'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'domashnee-rabochee-mesto']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'domashnee-rabochee-mesto'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'shkafy-raspashnye']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'domashnee-rabochee-mesto']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -425,14 +411,17 @@ foreach ($myposts as $pst): ?>
             <div class="col-lg-4">
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
-                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto'], 'catalog_item_img-1'); ?>) no-repeat;">
-                        <div class="catalog__header pt-30 pl-20">
-                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto']); ?>" class="link link-catalog">
-                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto'], 'catalog_item_title'); ?>
+                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'garderobnye-komnaty'], 'catalog_item_img-1'); ?>) no-repeat;">
+
+                        <div class="catalog__header pt-30 pl-30">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'garderobnye-komnaty']); ?>"
+                               class="link link-catalog">
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'garderobnye-komnaty'], 'catalog_item_title'); ?>
                             </a>
                         </div>
                         <div class="catalog__footer pt-30 pl-30 pb-30">
-                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'domashnee-rabochee-mesto']); ?>" class="arrow">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'garderobnye-komnaty']); ?>"
+                               class="arrow">
                                 <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                      alt="arrow">
                             </a>
@@ -446,14 +435,16 @@ foreach ($myposts as $pst): ?>
             <div class="col-lg-4 offset-lg-1">
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
-                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'detskie'], 'catalog_item_img-1'); ?>) no-repeat;">
-                        <div class="catalog__header pt-30 pl-20">
-                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'detskie']); ?>" class="link link-catalog">
-                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'detskie'], 'catalog_item_title'); ?>
+                         style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'detskie'], 'catalog_item_img-1'); ?>) no-repeat;">
+                        <div class="catalog__header pt-30 pl-30">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'detskie']); ?>"
+                               class="link link-catalog">
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'detskie'], 'catalog_item_title'); ?>
                             </a>
                         </div>
                         <div class="catalog__footer pt-30 pl-30 pb-30">
-                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'detskie']); ?>" class="arrow">
+                            <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'detskie']); ?>"
+                               class="arrow">
                                 <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                      alt="arrow">
                             </a>
@@ -465,16 +456,18 @@ foreach ($myposts as $pst): ?>
             <div class="col-lg-6">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="box-height-overflow-h mb-30">
+                        <div class="box-height-overflow-h mb-20">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'gostinye'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'gostinye']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'gostinye'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'gostinye'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'gostinye']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'gostinye'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'gostinye']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'gostinye']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -484,16 +477,18 @@ foreach ($myposts as $pst): ?>
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="box-height-overflow-h mb-30">
+                        <div class="box-height-overflow-h mb-20">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'biblioteki'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'biblioteki']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'biblioteki'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'biblioteki'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'biblioteki']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'biblioteki'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'biblioteki']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'biblioteki']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -507,14 +502,16 @@ foreach ($myposts as $pst): ?>
                     <div class="col-lg-12">
                         <div class="box-height-overflow-h mb-30">
                             <div class="box-height box-height__255 ffd-column fjc-sb"
-                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item','name' => 'realizovannye-proekty'], 'catalog_item_img-1'); ?>) no-repeat;">
-                                <div class="catalog__header pt-30 pl-20">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'realizovannye-proekty']); ?>" class="link link-catalog">
-                                        <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => 'realizovannye-proekty'], 'catalog_item_title'); ?>
+                                 style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'realizovannye-proekty'], 'catalog_item_img-1'); ?>) no-repeat;">
+                                <div class="catalog__header pt-30 pl-30">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'realizovannye-proekty']); ?>"
+                                       class="link link-catalog">
+                                        <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => 'realizovannye-proekty'], 'catalog_item_title'); ?>
                                     </a>
                                 </div>
                                 <div class="catalog__footer pt-30 pl-30 pb-30">
-                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item','name' => 'realizovannye-proekty']); ?>" class="arrow">
+                                    <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'realizovannye-proekty']); ?>"
+                                       class="arrow">
                                         <img src="<?= get_template_directory_uri() ?>/img/catalog/ico-btn/arrow-r.svg"
                                              alt="arrow">
                                     </a>
@@ -525,9 +522,7 @@ foreach ($myposts as $pst): ?>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
-
 
 <?php get_footer(); ?>

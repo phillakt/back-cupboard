@@ -4,8 +4,10 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
 
 function theme_scripts()
 {
-    wp_enqueue_style('main-css', get_template_directory_uri() . './style/main.css');
-    wp_enqueue_script('main-js', get_template_directory_uri() . './js/main.js', null, false);
+    wp_enqueue_style('main-css', get_template_directory_uri() . '/style/main.css');
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', null, false);
+    wp_enqueue_style('light-box-css', get_template_directory_uri() . '/plugins/light-box/css/lightbox.css');
+    wp_enqueue_script('light-box-js', get_template_directory_uri() . '/plugins/light-box/js/lightbox.js', null, false);
     wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
 }
 
@@ -58,8 +60,14 @@ class Catalog
         self::field($arg, $field);
     }
 
+    public static function getTitleCat($arg = [])
+    {
+        self::field($arg);
+    }
+
     public static function getLink($arg = [])
     {
         self::fieldLink($arg);
     }
+
 }

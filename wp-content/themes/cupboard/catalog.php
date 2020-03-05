@@ -25,9 +25,9 @@ Template Name: Шаблон "Каталог"
                                     <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                          alt="ico_search">
                                 </div>
-                                <div class="link link__default link__default_w pt-5 fs-14">
-                                    +7 (000) 000 0000
-                                </div>
+                                <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                    +7 (4722) 373-543
+                                </a>
                             </a>
 
                             <!-- Search form start -->
@@ -44,7 +44,7 @@ Template Name: Шаблон "Каталог"
                         </div>
 
                         <div class="sticky-logo fjc-c">
-                            <a href="#!">
+                            <a href="/">
                                 <img src="<?= get_template_directory_uri() ?>/img/logo-white.svg" alt="logo-white">
                             </a>
                         </div>
@@ -95,6 +95,37 @@ Template Name: Шаблон "Каталог"
 
     <!-- ############# Menu-sticky end ############### -->
 
+    <?php
+
+    $countTemplate = 0;
+
+    $position = [];
+
+    // создаем экземпляр
+    $my_posts = new WP_Query;
+
+    // делаем запрос
+    $myposts = $my_posts->query(['post_type' => 'catalog_item']);
+
+    foreach ($myposts as $pst): ?>
+
+        <?php
+
+        $position[get_field('Pozicziya', $pst->ID)] = [
+            'id-name' => $pst->post_name,
+            'title' => get_field('catalog_item_title', $pst->ID),
+            'link' => '/' . $pst->post_type . '/' . $pst->post_name,
+            'img-1' => get_field('catalog_item_img-1', $pst->ID),
+            'img-2' => get_field('catalog_item_img-2', $pst->ID),
+            'img-3' => get_field('catalog_item_img-3', $pst->ID),
+        ];
+        
+        ?>
+
+    <?php endforeach;
+
+    ksort($position); ?>
+
     <section class="catalog catalog-all mt-90">
         <div class="container">
             <div class="row">
@@ -106,66 +137,33 @@ Template Name: Шаблон "Каталог"
                     <div class="row align-items-center">
                         <div class="col-lg-8">
                             <ul class="breadcrumbs fjc-s fai-c mt-20 mb-20">
-                                <li class="fjc-s fai-c"><a href="<?= home_url() ?>"
-                                                           class="fs-14 fw-700 link link__default link__default_b">Главная</a>
+                                <li class="fjc-s fai-c">
+                                    <a href="<?= home_url() ?>" class="fs-14 fw-700 link link__default link__default_b">Главная</a>
                                 </li>
-                                <li class="fjc-s fai-c"><span class="fjc-c fai-c pl-10 pr-10">—</span> <a
-                                        href="<?= home_url() ?>/<?= $category_name = get_query_var('name'); ?>"
-                                        class="fs-14 fw-700 link link__default link__default_b">Каталог</a>
+                                <li class="fjc-s fai-c">
+                                    <span class="fjc-c fai-c pl-10 pr-10">—</span>Каталог
                                 </li>
                             </ul>
                         </div>
 
                         <div class="col-lg-3">
+                            <div class="dropdown" id="catalog-dropdown">
+                                <button class="dropdown-toggle ui-select__head pt-10 pb-10 pl-10 pr-10 fjc-s br-1-black"
+                                        type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Выберите категорию
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                            <form class="form-cost" id="form-cost__catalog-all">
-                                <div class="ui-select">
+                                    <?php foreach ($position as $item): ?>
 
-                                    <button type="button"
-                                            class="ui-select__head pt-10 pb-10 pl-10 pr-10 fjc-s br-1-black">Тип
-                                        изделия
-                                    </button>
+                                        <a class="dropdown-item" href="#!"
+                                           data-select-item="<?= $item['id-name']; ?>"><?= $item['title']; ?></a>
 
-                                    <div class="ui-select__container">
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_11"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem ipsum
-                                                - 1</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_11"
-                                                   value="1">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_22"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem ipsum
-                                                - 2</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_22"
-                                                   value="2">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_33"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem ipsum
-                                                - 3</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_33"
-                                                   value="3">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_44"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem ipsum
-                                                - 4</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_44"
-                                                   value="4">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_55"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem ipsum
-                                                - 5</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_55"
-                                                   value="5">
-                                        </div>
-                                    </div>
+                                    <?php endforeach; ?>
 
                                 </div>
-                            </form>
+                            </div>
 
                         </div>
                     </div>
@@ -175,27 +173,17 @@ Template Name: Шаблон "Каталог"
                 <div class="col-lg-12">
                     <div class="row bg-line">
 
-                        <?php
-
-                        $countTemplate = 0;
-
-                        // создаем экземпляр
-                        $my_posts = new WP_Query;
-
-                        // делаем запрос
-                        $myposts = $my_posts->query(['post_type' => 'catalog_item']);
-
-                        foreach ($myposts as $pst): ?>
+                        <?php foreach ($position as $item): ?>
 
                             <?php if ($countTemplate % 2 === 0): ?>
 
                                 <!-- 1 Left -->
-                                <div class="col-lg-10 offset-lg-1">
+                                <div class="col-lg-10 offset-lg-1" id="<?= $item['id-name']; ?>">
                                     <div class="row align-items-end">
                                         <div class="col-lg-4">
                                             <div class="box-height-overflow-h">
                                                 <div class="box-height box-height__350 ffd-column fjc-sb "
-                                                     style="background: url(<?= get_field('catalog_item_img-1', $pst->ID); ?> ) no-repeat;">
+                                                     style="background: url(<?= $item['img-1']; ?> ) no-repeat;">
                                                 </div>
                                             </div>
                                         </div>
@@ -203,12 +191,12 @@ Template Name: Шаблон "Каталог"
                                         <div class="col-lg-4">
                                             <div class="fjc-s mb-30">
                                                 <h2 class="title title__h2 c-black fw-700">
-                                                    <?= get_field('catalog_item_title', $pst->ID); ?>
+                                                    <?= $item['title']; ?>
                                                 </h2>
                                             </div>
                                             <div class="box-height-overflow-h">
                                                 <div class="box-height box-height__200 ffd-column fjc-sb "
-                                                     style="background: url(<?= get_field('catalog_item_img-2', $pst->ID); ?>) no-repeat;">
+                                                     style="background: url(<?= $item['img-2']; ?>) no-repeat;">
                                                 </div>
                                             </div>
                                         </div>
@@ -217,14 +205,14 @@ Template Name: Шаблон "Каталог"
                                             <div class="row">
                                                 <div class="col-lg-8 offset-lg-4">
                                                     <div class="mb-30">
-                                                        <a href="<?= '/' . $pst->post_type .'/'. $pst->post_name ?>"
+                                                        <a href="<?= $item['link']; ?>"
                                                            class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">Подробнее</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="box-height-overflow-h">
                                                 <div class="box-height box-height__200 ffd-column fjc-sb "
-                                                     style="background: url(<?= get_field('catalog_item_img-3', $pst->ID); ?>) no-repeat;">
+                                                     style="background: url(<?= $item['img-3']; ?>) no-repeat;">
                                                 </div>
                                             </div>
                                         </div>
@@ -234,17 +222,17 @@ Template Name: Шаблон "Каталог"
                             <?php else: ; ?>
 
                                 <!-- 2 Right -->
-                                <div class="col-lg-10 offset-lg-1">
+                                <div class="col-lg-10 offset-lg-1" id="<?= $item['id-name']; ?>">
                                     <div class="row align-items-end">
                                         <div class="col-lg-4">
                                             <div class="fjc-s mb-30">
                                                 <h2 class="title title__h2 c-black fw-700">
-                                                    <?= get_field('catalog_item_title', $pst->ID); ?>
+                                                    <?= $item['title']; ?>
                                                 </h2>
                                             </div>
                                             <div class="box-height-overflow-h">
                                                 <div class="box-height box-height__200 ffd-column fjc-sb "
-                                                     style="background: url(<?= get_field('catalog_item_img-1', $pst->ID); ?>) no-repeat;">
+                                                     style="background: url(<?= $item['img-3']; ?>) no-repeat;">
                                                 </div>
                                             </div>
                                         </div>
@@ -253,14 +241,14 @@ Template Name: Шаблон "Каталог"
                                             <div class="row">
                                                 <div class="col-lg-8 offset-lg-4">
                                                     <div class="mb-30">
-                                                        <a href="<?= '/' . $pst->post_type .'/'. $pst->post_name ?>"
+                                                        <a href="<?= $item['link']; ?>"
                                                            class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">Подробнее</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="box-height-overflow-h">
                                                 <div class="box-height box-height__200 ffd-column fjc-sb "
-                                                     style="background: url(<?= get_field('catalog_item_img-2', $pst->ID); ?>) no-repeat;">
+                                                     style="background: url(<?= $item['img-2']; ?>) no-repeat;">
                                                 </div>
                                             </div>
                                         </div>
@@ -268,7 +256,7 @@ Template Name: Шаблон "Каталог"
                                         <div class="col-lg-4">
                                             <div class="box-height-overflow-h">
                                                 <div class="box-height box-height__350 ffd-column fjc-sb "
-                                                     style="background: url(<?= get_field('catalog_item_img-3', $pst->ID); ?>) no-repeat;">
+                                                     style="background: url(<?= $item['img-2']; ?>) no-repeat;">
                                                 </div>
                                             </div>
                                         </div>

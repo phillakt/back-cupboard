@@ -1,3 +1,5 @@
+
+
 <section class="calculate mt-50 pt-30 pb-30">
     <form class="form-cost" id="form-cost__calculate">
         <div class="container">
@@ -12,55 +14,43 @@
                         <div class="col-lg-4">
                             <div class="pt-10 pb-10">
                                 <input type="text" name="ui-email-cost" class="ui-input pl-20 pr-20 pt-10 pb-10"
-                                       placeholder="Телефон / email">
+                                       placeholder="Телефон">
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="pt-10 pb-10">
-                                <div class="ui-select">
+                                <div class="dropdown">
+                                    <button
+                                        class="dropdown-toggle ui-select__head pt-10 pb-10 pl-10 pr-10 fjc-s br-1-black"
+                                        type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Тип изделия
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#!"
+                                           data-select-item="">Шкафы-купе</a>
 
-                                    <button type="button"
-                                            class="ui-select__head pt-10 pb-10 pl-10 pr-10 fjc-s">Тип
-                                        изделия</button>
+                                        <a class="dropdown-item" href="#!"
+                                           data-select-item="">Прихожие</a>
 
-                                    <div class="ui-select__container">
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_1"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem
-                                                ipsum - 1</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_1"
-                                                   value="1">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_2"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem
-                                                ipsum - 2</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_2"
-                                                   value="2">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_3"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem
-                                                ipsum - 3</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_3"
-                                                   value="3">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_4"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem
-                                                ipsum - 4</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_4"
-                                                   value="4">
-                                        </div>
-                                        <div class="ui-select__option">
-                                            <label for="ui-select__option_5"
-                                                   class="ui-select__item pt-10 pb-10 pl-10 fjc-s c-white">Lorem
-                                                ipsum - 5</label>
-                                            <input type="radio" name="ui-select-cost" id="ui-select__option_5"
-                                                   value="5">
-                                        </div>
+                                        <a class="dropdown-item" href="#!"
+                                           data-select-item="">Шкафы распашные</a>
+
+                                        <!--                                        --><?php
+                                        //
+                                        //                                        $my_posts = new WP_Query;
+                                        //
+                                        //                                        $myposts = $my_posts->query(['post_type' => 'catalog_item']);
+                                        //
+                                        //                                        foreach ($myposts as $pst): ?>
+                                        <!---->
+                                        <!--                                            <a class="dropdown-item" href="#!"-->
+                                        <!--                                               data-select-item="-->
+                                        <? //= $pst->post_name; ?><!--">--><? //= $pst->post_title; ?><!--</a>-->
+                                        <!---->
+                                        <!--                                        --><?php //endforeach; ?>
+
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -72,7 +62,8 @@
                         <a href="#!" class="fjc-sa fai-c link__default">
                             <img src="<?= get_template_directory_uri() ?>/img/calculate/ico_add.svg" alt="ico_add">
                             <div class="ml-10 title__h5 link link__default link__default_w c-white">Прикрепить
-                                проект</div>
+                                проект
+                            </div>
                         </a>
                         <div>
                             <div class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">
@@ -193,7 +184,7 @@
                 <div class="row">
                     <div class="col-lg-7 offset-lg-1">
                         <input type="text" class="br-1-yellow ui-input pt-10 pb-10 pl-30 c-black mb-30"
-                               placeholder="Телефон / email">
+                               placeholder="Телефон">
                     </div>
                     <div class="col-lg-3">
                         <div class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">
@@ -210,31 +201,31 @@
 <footer class="footer pb-60">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 offset-lg-1">
+            <div class="col-lg-2 col-md-2 col-sm-2 offset-lg-2">
 
                 <ul class="ui-ul footer-link">
                     <?php
                     $args = array(
-                        'depth'        => 0,
-                        'show_date'    => '',
-                        'date_format'  => get_option('date_format'),
-                        'child_of'     => 0,
-                        'exclude'      => '',
+                        'depth' => 0,
+                        'show_date' => '',
+                        'date_format' => get_option('date_format'),
+                        'child_of' => 0,
+                        'exclude' => '',
                         'exclude_tree' => '',
-                        'include'      => '',
-                        'title_li'     => '',
-                        'echo'         => 1,
-                        'authors'      => '',
-                        'sort_column'  => 'menu_order, post_title',
-                        'sort_order'   => 'ASC',
-                        'link_before'  => '',
-                        'link_after'   => '',
-                        'meta_key'     => '',
-                        'meta_value'   => '',
-                        'number'       => '',
-                        'offset'       => '',
-                        'walker'       => '',
-                        'post_type'    => 'page', // из функции get_pages()
+                        'include' => '',
+                        'title_li' => '',
+                        'echo' => 1,
+                        'authors' => '',
+                        'sort_column' => 'menu_order, post_title',
+                        'sort_order' => 'ASC',
+                        'link_before' => '',
+                        'link_after' => '',
+                        'meta_key' => '',
+                        'meta_value' => '',
+                        'number' => '',
+                        'offset' => '',
+                        'walker' => '',
+                        'post_type' => 'page', // из функции get_pages()
                     );
 
                     wp_list_pages($args); ?>
@@ -242,34 +233,48 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="col-lg-5 col-md-5 col-sm-5">
 
                 <?php
 
+                $countTemplate = 0;
+
+                $position = [];
+
+                // создаем экземпляр
                 $my_posts = new WP_Query;
 
-                $myposts = $my_posts->query(['post_type' => 'catalog_item']); ?>
+                // делаем запрос
+                $myposts = $my_posts->query(['post_type' => 'catalog_item']);
 
-                <ul class="ui-ul">
+                foreach ($myposts as $pst): ?>
 
-                    <?php foreach ($myposts as $pst): ?>
+                    <?php
+
+                    $position[get_field('Pozicziya', $pst->ID)] = [
+                        'id-name' => $pst->post_name,
+                        'title' => get_field('catalog_item_title', $pst->ID),
+                        'link' => '/' . $pst->post_type . '/' . $pst->post_name,
+                        'img-1' => get_field('catalog_item_img-1', $pst->ID),
+                        'img-2' => get_field('catalog_item_img-2', $pst->ID),
+                        'img-3' => get_field('catalog_item_img-3', $pst->ID),
+                    ]; ?>
+
+                <?php endforeach;
+                ksort($position); ?>
+
+                <ul class="footer-catalog ui-ul">
+
+                    <?php foreach ($position as $item): ?>
 
                         <li class="mb-5">
-                            <a href="<?= home_url(); ?>/<?= $pst->post_type ?>/<?= $pst->post_name; ?>"
+                            <a href="<?= home_url(); ?><?= $item['link']; ?>"
                                class="c-white fs-14 link link__default link__default_w">
-                                <?= $pst->post_title; ?>
+                                <?= $item['title']; ?>
                             </a>
                         </li>
 
                     <?php endforeach; ?>
-                </ul>
-
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2">
-
-                <ul class="ui-ul">
-
                 </ul>
 
             </div>
@@ -324,33 +329,33 @@
 
                     <div class="fjc-s ml-60">
                         <div class="mr-20">
-                            <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg" alt="ico_search">
+                            <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
+                                 alt="ico_search">
                         </div>
-                        <div class="link link__default link__default_w pt-5 fs-14">
-                            +7 (000) 000 0000
-                        </div>
+                        <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                            +7 (4722) 373-543
+                        </a>
                     </div>
-
 
                     <?php
 
                     wp_nav_menu([
-                        'theme_location'  => '',
-                        'menu'            => 'menu-sticky',
-                        'container'       => 'div',
+                        'theme_location' => '',
+                        'menu' => 'menu-sticky',
+                        'container' => 'div',
                         'container_class' => '',
-                        'container_id'    => '',
-                        'menu_class'      => 'menu',
-                        'menu_id'         => '',
-                        'echo'            => true,
-                        'fallback_cb'     => 'wp_page_menu',
-                        'before'          => '',
-                        'after'           => '',
-                        'link_before'     => '',
-                        'link_after'      => '',
-                        'items_wrap'      => '<ul id="%1$s" class="ffd-column ml-60 mt-60 %2$s">%3$s</ul>',
-                        'depth'           => 0,
-                        'walker'          => '',
+                        'container_id' => '',
+                        'menu_class' => 'menu',
+                        'menu_id' => '',
+                        'echo' => true,
+                        'fallback_cb' => 'wp_page_menu',
+                        'before' => '',
+                        'after' => '',
+                        'link_before' => '',
+                        'link_after' => '',
+                        'items_wrap' => '<ul id="%1$s" class="ffd-column ml-60 mt-60 %2$s">%3$s</ul>',
+                        'depth' => 0,
+                        'walker' => '',
                     ]);
 
                     ?>
@@ -362,11 +367,10 @@
 </section>
 
 <!-- ############# Mobile-menu end ############### -->
+
 </main>
 
-
-<!--<script src="./js/main.js"></script>-->
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 

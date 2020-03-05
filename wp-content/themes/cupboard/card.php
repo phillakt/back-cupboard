@@ -28,9 +28,9 @@ Template Post Type: product_item
                                 <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                      alt="ico_search">
                             </div>
-                            <div class="link link__default link__default_w pt-5 fs-14">
-                                +7 (000) 000 0000
-                            </div>
+                            <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                +7 (4722) 373-543
+                            </a>
                         </a>
 
                         <!-- Search form start -->
@@ -47,7 +47,7 @@ Template Post Type: product_item
                     </div>
 
                     <div class="sticky-logo fjc-c">
-                        <a href="#!">
+                        <a href="/">
                             <img src="<?= get_template_directory_uri() ?>/img/logo-white.svg" alt="logo-white">
                         </a>
                     </div>
@@ -104,17 +104,29 @@ Template Post Type: product_item
         <div class="row">
             <div class="col-lg-12">
                 <ul class="breadcrumbs fjc-s fai-c mt-20 mb-60">
-                    <li class="fjc-s fai-c"><a href="<?= home_url() ?>"
-                                               class="fs-14 fw-700 link link__default link__default_b">Главная</a></li>
-                    <li class="fjc-s fai-c"><span class="fjc-c fai-c pl-10 pr-10">—</span> <a
-                            href="<?= home_url() ?>/katalog"
-                            class="fs-14 fw-700 link link__default link__default_b">Каталог</a></li>
-                    <li class="fjc-s fai-c"><span class="fjc-c fai-c pl-10 pr-10">—</span> <a
-                            href="<?= home_url() ?>/catalog_item/<?= get_the_category(get_the_ID())[0]->name ?>"
-                            class="fs-14 fw-700 link link__default link__default_b">Шкафы-купе</a></li>
-                    <li class="fjc-s fai-c"><span class="fjc-c fai-c pl-10 pr-10">—</span>
+
+                    <li class="fjc-s fai-c">
+                        <a href="<?= home_url() ?>" class="fs-14 fw-700 link link__default link__default_b">Главная</a>
+                    </li>
+
+                    <li class="fjc-s fai-c">
+                        <span class="fjc-c fai-c pl-10 pr-10">—</span>
+                        <a href="<?= home_url() ?>/katalog"
+                            class="fs-14 fw-700 link link__default link__default_b">Каталог</a>
+                    </li>
+
+                    <li class="fjc-s fai-c">
+                        <span class="fjc-c fai-c pl-10 pr-10">—</span>
+
+                        <a href="<?= home_url() ?>/catalog_item/<?= get_the_category(get_the_ID())[0]->slug ?>"
+                            class="fs-14 fw-700 link link__default link__default_b"><?= get_the_category(get_the_ID())[0]->name; ?></a>
+                    </li>
+
+                    <li class="fjc-s fai-c">
+                        <span class="fjc-c fai-c pl-10 pr-10">—</span>
                         <?php Catalog::getTitle(['post_type' => 'product_item', 'name' => $category_name = get_query_var('name')], 'product_item_title'); ?>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -149,7 +161,7 @@ Template Post Type: product_item
 
                     <div class="desc mt-30">
                         <?php foreach ($myposts as $pst): ?>
-                            
+
                             <?= $pst->post_content; ?>
 
                         <?php endforeach; ?>
@@ -165,11 +177,12 @@ Template Post Type: product_item
                         <?php
                         $count_img = 1;
 
-                        while($count_img <= 10): ?>
+                        while ($count_img <= 10): ?>
 
-                            <?php if(get_field('product_item_img-' . $count_img)): ?>
+                            <?php if (get_field('product_item_img-' . $count_img)): ?>
 
-                                <div class="swiper-slide" style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></div>
+                                <a href="<?= get_field('product_item_img-' . $count_img); ?>" data-lightbox="product_item" class="swiper-slide"
+                                     style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></a>
 
                             <?php endif; ?>
 
@@ -189,18 +202,19 @@ Template Post Type: product_item
                         <?php
                         $count_img = 1;
 
-                        while($count_img <= 10): ?>
+                        while ($count_img <= 10): ?>
 
-                            <?php if(get_field('product_item_img-' . $count_img)): ?>
+                            <?php if (get_field('product_item_img-' . $count_img)): ?>
 
-                                <div class="swiper-slide" style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></div>
+                                <div class="swiper-slide"
+                                     style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></div>
 
                             <?php endif; ?>
 
                             <?php $count_img++; ?>
 
                         <?php endwhile; ?>
-                        
+
                     </div>
                 </div>
             </div>

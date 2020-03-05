@@ -14148,13 +14148,13 @@ $(document).ready(function () {
             $('#form-cost__calculate .ui-select__container').css({
                 height: 0
             });
-            $('#form-cost__calculate .ui-select__head').css({borderRadius: '6px'});
+            // $('#form-cost__calculate .ui-select__head').css({borderRadius: '6px'});
         } else {
             $('#form-cost__calculate .ui-select__container').addClass('ui-select__container_view');
             $('#form-cost__calculate .ui-select__container').css({
                 height: height
             });
-            $('#form-cost__calculate .ui-select__head').css({borderRadius: '6px 6px 0 0'});
+            // $('#form-cost__calculate .ui-select__head').css({borderRadius: '6px 6px 0 0'});
         }
     }
 
@@ -14169,13 +14169,13 @@ $(document).ready(function () {
             $('#form-cost__catalog-all .ui-select__container').css({
                 height: 0
             });
-            $('#form-cost__catalog-all .ui-select__head').css({borderRadius: '6px'});
+            // $('#form-cost__catalog-all .ui-select__head').css({borderRadius: '6px'});
         } else {
             $('#form-cost__catalog-all .ui-select__container').addClass('ui-select__container_view');
             $('#form-cost__catalog-all .ui-select__container').css({
                 height: height
             });
-            $('#form-cost__catalog-all .ui-select__head').css({borderRadius: '6px 6px 0 0'});
+            // $('#form-cost__catalog-all .ui-select__head').css({borderRadius: '6px 6px 0 0'});
         }
     }
 
@@ -14276,4 +14276,23 @@ $(document).ready(function () {
     });
 
     // Scroll menu-sticky end
+
+
+//	Scroll catalog
+
+	if($('catalog-dropdown')){
+
+		$('#catalog-dropdown .dropdown-item').on('click', function () {
+
+			console.log($(this).data('select-item'));
+
+			var id = $(this).data('select-item');
+
+			document.querySelector('#' + id).scrollIntoView({ behavior: 'smooth' });
+
+
+		})
+	}
+
+//	Scroll catalog end
 });

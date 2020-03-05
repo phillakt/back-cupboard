@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Шаблон "Акции"
-Template Post Type: post
+Template Post Type: post, page
 */
 ?>
 
@@ -27,9 +27,9 @@ Template Post Type: post
                                 <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                      alt="ico_search">
                             </div>
-                            <div class="link link__default link__default_w pt-5 fs-14">
-                                +7 (000) 000 0000
-                            </div>
+                            <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                +7 (4722) 373-543
+                            </a>
                         </a>
 
                         <!-- Search form start -->
@@ -46,7 +46,7 @@ Template Post Type: post
                     </div>
 
                     <div class="sticky-logo fjc-c">
-                        <a href="#!">
+                        <a href="/">
                             <img src="<?= get_template_directory_uri() ?>/img/logo-white.svg" alt="logo-white">
                         </a>
                     </div>
@@ -108,6 +108,7 @@ Template Post Type: post
         <?php
 
         $args = array('category_name' => 'stock');
+
         $query = new WP_Query($args);
 
         ?>

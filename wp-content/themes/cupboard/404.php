@@ -20,9 +20,9 @@
                                 <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                      alt="ico_search">
                             </div>
-                            <div class="link link__default link__default_w pt-5 fs-14">
-                                +7 (000) 000 0000
-                            </div>
+                            <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                +7 (4722) 373-543
+                            </a>
                         </a>
 
                         <!-- Search form start -->

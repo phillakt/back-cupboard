@@ -27,9 +27,9 @@ Template Post Type: catalog_item
                                 <img src="<?= get_template_directory_uri() ?>/img/menu/white/ico_phone.svg"
                                      alt="ico_search">
                             </div>
-                            <div class="link link__default link__default_w pt-5 fs-14">
-                                +7 (000) 000 0000
-                            </div>
+                            <a href="tel:84722373543" class="link link__default link__default_w pt-5 fs-14">
+                                +7 (4722) 373-543
+                            </a>
                         </a>
 
                         <!-- Search form start -->
@@ -46,7 +46,7 @@ Template Post Type: catalog_item
                     </div>
 
                     <div class="sticky-logo fjc-c">
-                        <a href="#!">
+                        <a href="/">
                             <img src="<?= get_template_directory_uri() ?>/img/logo-white.svg" alt="logo-white">
                         </a>
                     </div>
@@ -112,11 +112,12 @@ Template Post Type: catalog_item
                             </li>
                             <li class="fjc-s fai-c">
                                 <span class="fjc-c fai-c pl-10 pr-10">—</span>
-                                    <a href="<?= home_url() ?>/katalog" class="fs-14 fw-700 link link__default link__default_b">Каталог</a>
+                                <a href="<?= home_url() ?>/katalog"
+                                   class="fs-14 fw-700 link link__default link__default_b">Каталог</a>
                             </li>
                             <li class="fjc-s fai-c">
                                 <span class="fjc-c fai-c pl-10 pr-10">—</span>
-                                <?php Catalog::getTitle(['post_type' => 'catalog_item','name' => get_query_var('name')], 'catalog_item_title'); ?>
+                                <?php Catalog::getTitle(['post_type' => 'catalog_item', 'name' => get_query_var('name')], 'catalog_item_title'); ?>
                             </li>
 
                         </ul>
@@ -142,50 +143,51 @@ Template Post Type: catalog_item
 
             foreach ($myposts as $pst): ?>
 
-            <div class="col-lg-6 mb-30">
+                <div class="col-lg-6 mb-30">
 
-                <div class="products-card">
-                    <div class="box-height-overflow-h">
-                        <div class="box-height box-height__255 ffd-column fjc-sb "
-                             style="background: url(<?= get_field('product_item_img-1', $pst->ID); ?>) no-repeat;">
+                    <div class="products-card">
+                        <div class="box-height-overflow-h">
+                            <div class="box-height box-height__255 ffd-column fjc-sb "
+                                 style="background: url(<?= get_field('product_item_img-1', $pst->ID); ?>) no-repeat;">
+                            </div>
                         </div>
-                    </div>
-                    <div class="products-card__column fjc-sb fai-c mt-30 mb-30">
-                        <h3 class="title title__h2">
-                            <a href="/<?= $pst->post_type . '/' . $pst->post_name; ?>" class="fs-24 fw-700 link link__default link__default_b">
-                                <?= get_field('product_item_title', $pst->ID); ?>
-                            </a>
-                        </h3>
+                        <div class="products-card__column fjc-sb fai-c mt-30 mb-30">
+                            <h3 class="title title__h2">
+                                <a href="/<?= $pst->post_type . '/' . $pst->post_name; ?>"
+                                   class="fs-24 fw-700 link link__default link__default_b">
+                                    <?= get_field('product_item_title', $pst->ID); ?>
+                                </a>
+                            </h3>
                         <span class="fs-24 fw-700 c-red">
                             <?= get_field('product_czena_tovara', $pst->ID); ?>
                             руб
                         </span>
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
             <?php endforeach; ?>
 
         </div>
 
-<!--         Download more product-->
-                
-                <div class="row" style="transform: translateY(-20px);">
-                    <div class="col-lg-12">
-                        <div class="products-line">
-                            <div class="row">
-                                <div class="col-lg-2 offset-lg-5">
-                                    <div class="fjc-c fai-c">
-                                        <div class="button button__red fjc-c fai-c fs-12 pt-10 pb-10 pl-40 pr-40">
-                                            Загрузить еще
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-<!--         Download more product end-->
+        <!--         Download more product-->
+        <div class="br-1-yellow mt-30"></div>
+        <!--                <div class="row" style="transform: translateY(-20px);">-->
+        <!--                    <div class="col-lg-12">-->
+        <!--                        <div class="products-line">-->
+        <!--                            <div class="row">-->
+        <!--                                <div class="col-lg-2 offset-lg-5">-->
+        <!--                                    <div class="fjc-c fai-c">-->
+        <!--                                        <div class="button button__red fjc-c fai-c fs-12 pt-10 pb-10 pl-40 pr-40">-->
+        <!--                                            Загрузить еще-->
+        <!--                                        </div>-->
+        <!--                                    </div>-->
+        <!--                                </div>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--         Download more product end-->
 
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
