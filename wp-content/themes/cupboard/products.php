@@ -141,37 +141,52 @@ Template Post Type: catalog_item
                 ]
             );
 
-            foreach ($myposts as $pst): ?>
+            if ($myposts):
 
-                <div class="col-lg-6 mb-30">
+                foreach ($myposts as $pst): ?>
 
-                    <div class="products-card">
-                        <div class="box-height-overflow-h">
-                            <div class="box-height box-height__255 ffd-column fjc-sb "
-                                 style="background: url(<?= get_field('product_item_img-1', $pst->ID); ?>) no-repeat;">
+                    <div class="col-lg-6 mb-30">
+
+                        <div class="products-card">
+                            <div class="box-height-overflow-h">
+                                <a href="/<?= $pst->post_type . '/' . $pst->post_name; ?>"
+                                   class="box-height box-height__255 ffd-column fjc-sb "
+                                   style="background: url(<?= get_field('product_item_img-1', $pst->ID); ?>) no-repeat;">
+                                </a>
+                            </div>
+                            <div class="products-card__column fjc-sb fai-c mt-30 mb-30">
+                                <h3 class="title title__h2">
+                                    <a href="/<?= $pst->post_type . '/' . $pst->post_name; ?>"
+                                       class="fs-24 fw-700 link link__default link__default_b">
+                                        <?= get_field('product_item_title', $pst->ID); ?>
+                                    </a>
+                                </h3>
+                                <span class="fs-24 fw-700 c-red">
+                                    <?= get_field('product_czena_tovara', $pst->ID); ?>
+                                    руб
+                                </span>
                             </div>
                         </div>
-                        <div class="products-card__column fjc-sb fai-c mt-30 mb-30">
-                            <h3 class="title title__h2">
-                                <a href="/<?= $pst->post_type . '/' . $pst->post_name; ?>"
-                                   class="fs-24 fw-700 link link__default link__default_b">
-                                    <?= get_field('product_item_title', $pst->ID); ?>
-                                </a>
-                            </h3>
-                        <span class="fs-24 fw-700 c-red">
-                            <?= get_field('product_czena_tovara', $pst->ID); ?>
-                            руб
-                        </span>
-                        </div>
+
                     </div>
 
+                <?php endforeach; ?>
+
+            <?php else: ?>
+
+                <div class="col-lg-12">
+                    <div class="fjc-c">
+                        <h2 class="title title__h1 mt-60 mb-60">В данный момент раздел наполняется!</h2>
+                    </div>
                 </div>
-            <?php endforeach; ?>
+
+            <?php endif; ?>
 
         </div>
 
         <!--         Download more product-->
         <div class="br-1-yellow mt-30"></div>
+
         <!--                <div class="row" style="transform: translateY(-20px);">-->
         <!--                    <div class="col-lg-12">-->
         <!--                        <div class="products-line">-->
@@ -191,29 +206,17 @@ Template Post Type: catalog_item
 
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
-                <h1 class="title title__h1 c-red mt-60 mb-30">Наши шкафы-купе</h1>
-                <div>
-                    <div class="desc desc__sm">
-                        Создание идеи для обустройства комнаты может стоить больше, чем ее воплощение. Наша
-                        компания предлагает для заказа каталог
-                        реализованных дизайнерских проектов. Готовая мебель премиум-класса – квинтэссенция цены
-                        и качества. Скрытое место хранения
-                        в ванной комнате или шкаф перегородка из гостиной в спальню – все это можно найти на
-                        страницах каталога компании Раумплюс.
-                        Стеллажи для детской подойдут для складирования книг, игрушек, канцелярии. Подобранная
-                        обстановка –
-                        это возможность выгодно использовать пространство небольшой комнаты.
-                    </div>
-                    <div class="desc desc__sm mt-30">
-                        Реализованные проекты и их преимущества
-                        Этот раздел каталога располагает ранее разработанными и созданными идеями дизайнерской
-                        мебели.
-                        Предлагается ассортимент конструкций премиум-класса следующих типов: шкаф-купе,
-                        межкомнатная перегородка,
-                        гардеробная, стеллаж и другие системы хранения вещей. Преимущества выбора реализованных
-                        идей:
-                    </div>
+
+                <h1 class="title title__h1 c-red mt-60 mb-30"><?= the_title(); ?></h1>
+
+                <div class="desc desc__sm">
+                    <?php while (have_posts()): the_post() ?>
+
+                        <?= get_the_content(); ?>
+
+                    <?php endwhile; ?>
                 </div>
+
             </div>
         </div>
     </div>

@@ -8880,7 +8880,10 @@ button {
   top: 225px;
   display: flex;
   justify-content: space-around;
-  pointer-events: none; }
+  pointer-events: none;
+  padding-left: 8em;
+  padding-right: 8em;
+}
   @media (max-width: 991px) and (min-width: 769px) {
     .main-slider .owl-theme .owl-nav {
       top: 120px; } }
@@ -8953,7 +8956,8 @@ button {
   transition: all 0.3s !important; }
 
 .menu .sticky-search, .menu .sticky-logo, .menu .sticky-drop-hamburger {
-  width: 33%; }
+  width: 21%;
+}
 
 .menu-drop {
   position: absolute;
@@ -9636,6 +9640,7 @@ button {
   border: none; }
 
 .catalog .box-height-overflow-h {
+  position: relative;
   border: 5px solid #eee; }
 
 .menu-sticky {
@@ -9931,3 +9936,21 @@ body {
   #app {
     position: relative;
     margin-top: 30px; } }
+
+.gallery-top {
+  height: 550px !important;
+}
+
+
+/* link-hidden */
+
+  .link-hidden {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+  }
+
+/* link-hidden end*/

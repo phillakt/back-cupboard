@@ -1,143 +1,90 @@
 
-
-<section class="calculate mt-50 pt-30 pb-30">
+<section class="calculate pt-30 pb-30">
     <form class="form-cost" id="form-cost__calculate">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4">
-                            <h4 class="title title__h4 c-white">
-                                Рассчитать стоимость
-                            </h4>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="pt-10 pb-10">
-                                <input type="text" name="ui-email-cost" class="ui-input pl-20 pr-20 pt-10 pb-10"
-                                       placeholder="Телефон">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="fjc-c fai-c">
+                                <div class="mr-10 pr-5">
+                                    <img src="<?= get_template_directory_uri() ?>/img/calculate/modal/ico_1.png"
+                                         alt="ico_1">
+                                </div>
+                                <div>
+                                    <a href="#!" data-toggle="modal" data-target="#exampleModal" class="c-white fs-18 link link__default link__default_w">Заказать дизайн</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="pt-10 pb-10">
-                                <div class="dropdown">
-                                    <button
-                                        class="dropdown-toggle ui-select__head pt-10 pb-10 pl-10 pr-10 fjc-s br-1-black"
-                                        type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        Тип изделия
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#!"
-                                           data-select-item="">Шкафы-купе</a>
-
-                                        <a class="dropdown-item" href="#!"
-                                           data-select-item="">Прихожие</a>
-
-                                        <a class="dropdown-item" href="#!"
-                                           data-select-item="">Шкафы распашные</a>
-
-                                        <!--                                        --><?php
-                                        //
-                                        //                                        $my_posts = new WP_Query;
-                                        //
-                                        //                                        $myposts = $my_posts->query(['post_type' => 'catalog_item']);
-                                        //
-                                        //                                        foreach ($myposts as $pst): ?>
-                                        <!---->
-                                        <!--                                            <a class="dropdown-item" href="#!"-->
-                                        <!--                                               data-select-item="-->
-                                        <? //= $pst->post_name; ?><!--">--><? //= $pst->post_title; ?><!--</a>-->
-                                        <!---->
-                                        <!--                                        --><?php //endforeach; ?>
-
-                                    </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="fjc-c fai-c">
+                                <div class="mr-10 pr-5">
+                                    <img src="<?= get_template_directory_uri() ?>/img/calculate/modal/ico_2.png"
+                                         alt="ico_1">
+                                </div>
+                                <div>
+                                    <a href="#!" data-toggle="modal" data-target="#exampleModal" class="c-white fs-18 link link__default link__default_w">Заказать замер</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="fjc-c fai-c">
+                                <div class="mr-10 pr-5">
+                                    <img src="<?= get_template_directory_uri() ?>/img/calculate/modal/ico_3.png"
+                                         alt="ico_1">
+                                </div>
+                                <div>
+                                    <a href="#!" data-toggle="modal" data-target="#exampleModal" class="c-white fs-18 link link__default link__default_w">Обратный звонок</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="fjc-c fai-c">
+                                <div class="mr-10 pr-5">
+                                    <img src="<?= get_template_directory_uri() ?>/img/calculate/modal/ico_4.png"
+                                         alt="ico_1">
+                                </div>
+                                <div>
+                                    <a href="#!" data-toggle="modal" data-target="#exampleModal-2" class="c-white fs-18 link link__default link__default_w">Расчитать стоимость</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="fjc-sb">
-                        <a href="#!" class="fjc-sa fai-c link__default">
-                            <img src="<?= get_template_directory_uri() ?>/img/calculate/ico_add.svg" alt="ico_add">
-                            <div class="ml-10 title__h5 link link__default link__default_w c-white">Прикрепить
-                                проект
-                            </div>
-                        </a>
-                        <div>
-                            <div class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">
-                                Отправить
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </form>
 </section>
 
-<section class="contacts mt-90">
+<section class="contacts mt-80">
     <div class="container">
 
         <div class="row">
             <div class="col-lg-11 offset-lg-1">
                 <div>
-                    <h2 class="title title__h1 c-red mb-30">Контакты</h2>
-                </div>
-            </div>
-            <div class="col-lg-4 offset-lg-1">
-                <div>
-                    <ul class="ui-ul">
-                        <li class="mb-20 fs-14 c-black">
-                            г. Белгород, ул. 50-ти летия
-                            Белгородской
-                            области
-                            (Чернышевского), 6
-                        </li>
-                        <li class="mb-20 fs-14 c-black">
-                            г. Белгород, ул. Щорса 64
-                            ТРЦ Сити Молл
-                            "Белгородский",
-                            белое крыло, цокольный этаж
-                        </li>
-                        <li class="mb-20 fs-14 c-black">
-                            г. Белгород, ул. Есенина, д. 8
-                            (салон мебели)
-                        </li>
-                    </ul>
+                    <h2 class="title title__h1 c-red mb-40">Контакты</h2>
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-10 offset-lg-1">
 
                 <div class="row">
-                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 mb-40">
+
+                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 mb-30">
                         <div class="row">
+
                             <div class="col-lg-4">
-                                <div><a href="tel:+74722373543"
-                                        class="fs-14 fw-700 link link__default link__default_b">8 (4722)
-                                        373-543</a></div>
+                                г. Белгород, ул. 50-ти летия
+                                Белгородской области, 6
                             </div>
-                            <div class="col-lg-6">
-                                <div class="desc desc__sm">Почта онлайн заказов</div>
+
+                            <div class="col-lg-3">
+                                <div><a href="tel:+74722375543"
+                                        class="fs-14 fw-700 link link__default link__default_b">8 (4722) 375-543 мтс</a></div>
                             </div>
-                            <div class="col-lg-2">
-                                <div><a href="mailto:online@dshkaf.ru"
-                                        class="fs-14 fw-700 link link__default link__default_b">online@dshkaf.ru</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 mb-40">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div><a href="tel:+74722375505"
-                                        class="fs-14 fw-700 link link__default link__default_b">8 (4722)
-                                        375-505</a></div>
-                            </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-3">
                                 <div class="desc desc__sm">Задавайте вопросы по адресу</div>
                             </div>
 
@@ -148,19 +95,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 mb-40">
+                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 mb-30">
                         <div class="row">
+
                             <div class="col-lg-4">
-                                <div><a href="tel:+74722582888"
-                                        class="fs-14 fw-700 link link__default link__default_b">8 (4722)
-                                        582-888</a></div>
+                                <div>
+                                    г. Белгород, Гражданский проспект, 18
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="desc desc__sm">Почта онлайн заказов</div>
+
+                            <div class="col-lg-3">
+                                <div><a href="tel:+74722375155"
+                                        class="fs-14 fw-700 link link__default link__default_b">8 (4722) 375-155 мтс</a></div>
                             </div>
+
+                            <div class="col-lg-3">
+                                <div class="desc desc__sm">Задавайте вопросы по адресу</div>
+                            </div>
+
                             <div class="col-lg-2">
-                                <div><a href="#!"
-                                        class="fs-14 fw-700 link link__default link__default_b">@account</a>
+                                <div><a href="mailto:info@dshkaf.ru"
+                                        class="fs-14 fw-700 link link__default link__default_b">info@dshkaf.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 mb-30">
+                        <div class="row">
+
+                            <div class="col-lg-4">
+                                <div>
+                                    г. Белгород, ул. Есенина, 11 бизнес центр SEVEN
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div><a href="tel:+74722375505"
+                                        class="fs-14 fw-700 link link__default link__default_b">8 (4722) 375-505 мтс</a></div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="desc desc__sm">Задавайте вопросы по адресу</div>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <div><a href="mailto:info@dshkaf.ru"
+                                        class="fs-14 fw-700 link link__default link__default_b">info@dshkaf.ru</a>
                                 </div>
                             </div>
                         </div>
@@ -170,9 +151,9 @@
             </div>
         </div>
 
-        <div class="row mt-60">
+        <div class="row mt-50">
             <div class="col-lg-8 bg-white offset-lg-2 br-1-yellow pb-30">
-                <div class="mt-30">
+                <div class="mt-40 pt-5">
                     <div class="fjc-c fai-c ffd-column">
                         <h3 class="title title__h1 c-black mb-10">У вас остались вопросы?</h3>
                         <div class="desc desc__sm mb-30 c-black">
@@ -181,17 +162,18 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-7 offset-lg-1">
-                        <input type="text" class="br-1-yellow ui-input pt-10 pb-10 pl-30 c-black mb-30"
-                               placeholder="Телефон">
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">
-                            Отправить
-                        </div>
-                    </div>
-                </div>
+                    <?= do_shortcode('[contact-form-7 id="198" title="form-questions"]'); ?>
+
+<!--                    <div class="col-lg-7 offset-lg-1">-->
+<!--                        <input type="text" class="br-1-yellow ui-input pt-10 pb-10 pl-30 c-black mb-10"-->
+<!--                               placeholder="Телефон">-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3">-->
+<!--                        <div class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">-->
+<!--                            Отправить-->
+<!--                        </div>-->
+<!--                    </div>-->
+
             </div>
         </div>
 
@@ -201,7 +183,7 @@
 <footer class="footer pb-60">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 offset-lg-2">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 offset-lg-2">
 
                 <ul class="ui-ul footer-link">
                     <?php
@@ -233,7 +215,7 @@
 
             </div>
 
-            <div class="col-lg-5 col-md-5 col-sm-5">
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
 
                 <?php
 
@@ -279,7 +261,7 @@
 
             </div>
 
-            <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="col-lg-2 col-md-3 col-sm-3">
 
                 <ul class="ui-ul">
                     <li class="mb-10">
@@ -368,9 +350,53 @@
 
 <!-- ############# Mobile-menu end ############### -->
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="fjc-sb pt-20 pr-20 pl-20">
+                <h5 class="modal-title" id="exampleModalLabel-1">Заказать дизайн</h5>
+                <span type="button" class="close c-red" data-dismiss="modal" aria-label="Close">
+                    &times;
+                </span>
+            </div>
+            <div class="modal-body fjc-c">
+                <?=
+                    do_shortcode('[contact-form-7 id="199" title="form-send"]');
+                ?>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="fjc-sb pt-20 pr-20 pl-20">
+                <h5 class="modal-title" id="exampleModalLabel-2">Расчитать стоимость</h5>
+                <span type="button" class="close c-red" data-dismiss="modal" aria-label="Close">
+                    &times;
+                </span>
+            </div>
+            <div class="modal-body fjc-c">
+                <?=
+                    do_shortcode('[contact-form-7 id="185" title="form-file"]');
+                ?>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 </main>
 
-<?php wp_footer(); ?>
+<?php //wp_footer(); ?>
 
 </body>
 

@@ -155,74 +155,77 @@
                     <!-- Search form end -->
 
 
-                    <div class="menu-drop-hamburger">
-                        <span class="c-white">
-                            Меню
-                        </span>
-                        <span class="pl-10 c-white">
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </div>
+<!--                    <div class="menu-drop-hamburger">-->
+<!--                        <span class="c-white">-->
+<!--                            Меню-->
+<!--                        </span>-->
+<!--                        <span class="pl-10 c-white">-->
+<!--                            <i class="fas fa-bars"></i>-->
+<!--                        </span>-->
+<!--                    </div>-->
 
-                    <div class="menu-drop pl-30 pr-30 pt-20 pb-20">
-                        <?php
+                    <?php
 
-                        wp_nav_menu([
-                            'theme_location' => '',
-                            'menu' => 'menu-sticky',
-                            'container' => 'div',
-                            'container_class' => '',
-                            'container_id' => '',
-                            'menu_class' => 'menu',
-                            'menu_id' => '',
-                            'echo' => true,
-                            'fallback_cb' => 'wp_page_menu',
-                            'before' => '',
-                            'after' => '',
-                            'link_before' => '',
-                            'link_after' => '',
-                            'items_wrap' => '<ul id="%1$s" class="fai-s %2$s">%3$s</ul>',
-                            'depth' => 0,
-                            'walker' => '',
-                        ]);
+                    wp_nav_menu([
+                        'theme_location' => '',
+                        'menu' => 'menu-sticky',
+                        'container' => 'div',
+                        'container_class' => '',
+                        'container_id' => '',
+                        'menu_class' => 'menu',
+                        'menu_id' => '',
+                        'echo' => true,
+                        'fallback_cb' => 'wp_page_menu',
+                        'before' => '',
+                        'after' => '',
+                        'link_before' => '',
+                        'link_after' => '',
+                        'items_wrap' => '<ul id="%1$s" class="fai-s %2$s">%3$s</ul>',
+                        'depth' => 0,
+                        'walker' => '',
+                    ]);
 
-                        ?>
+                    ?>
 
-                    </div>
+<!--                    <div class="menu-drop pl-30 pr-30 pt-20 pb-20">-->
+<!---->
+<!---->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="catalog">
+<section class="catalog mb-50">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="mt-40">
-                            <div class="fjc-sb fai-c pt-30 pb-30 pl-20"
-                                 style="background: linear-gradient(90deg, #D74339 1.11%, #E27E36 98.52%);">
+                        <div class="mt-60">
+                            <div class="fjc-c fai-c pt-20 pb-20 pl-20" style="background: #D74339;">
+<!--                                 style="background: linear-gradient(90deg, #D74339 1.11%, #E27E36 98.52%);">-->
+
                                 <h2 class="title title__h2 c-white">
                                     <a href="#!" class="link link__default link__default_w">Новинки</a>
                                 </h2>
-                                <div class="mr-20">
-                                    <img src="<?= get_template_directory_uri() ?>/img/New_ico.svg" alt="New_ico">
-                                </div>
+<!--                                <div class="mr-20">-->
+<!--                                    <img src="--><?//= get_template_directory_uri() ?><!--/img/new_ico.png" alt="New_ico">-->
+<!--                                </div>-->
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="mt-40">
-                            <div class="fjc-sb fai-c pt-30 pb-30 pl-20" style="background: #373334">
+                        <div class="mt-60">
+                            <div class="fjc-c fai-c pt-20 pb-20 pl-20" style="background: #373334">
                                 <h2 class="title title__h2 c-white">
                                     <a href="#!" class="link link__default link__default_w">Реализованные
                                         проекты</a>
                                 </h2>
-                                <div class="mr-20">
-                                    <img src="<?= get_template_directory_uri() ?>/img/Fire_ico.svg" alt="Fire_ico">
-                                </div>
+<!--                                <div class="mr-20">-->
+<!--                                    <img src="--><?//= get_template_directory_uri() ?><!--/img/shelves_ico.png" alt="Fire_ico">-->
+<!--                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -244,6 +247,7 @@
 
         <div class="row">
             <div class="col-lg-4 offset-lg-1">
+
                 <div class="box-height-overflow-h mb-30">
                     <div class="box-height box-height__500 ffd-column fjc-sb"
                          style="background: url(<?php Catalog::getImg(['post_type' => 'catalog_item', 'name' => 'shkafy-kupe'], 'catalog_item_img-1'); ?>) no-repeat;">
@@ -260,8 +264,10 @@
                                      alt="arrow">
                             </a>
                         </div>
+                        <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'shkafy-kupe']) ?>" class="link-hidden"></a>
                     </div>
                 </div>
+
             </div>
 
             <div class="col-lg-6">
@@ -283,6 +289,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'prihozhie']) ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -304,6 +311,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'komody']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -327,6 +335,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'kuhni']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -354,6 +363,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'mezhkomnatnye-peregorodki']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -378,6 +388,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'shkafy-raspashnye']); ?>" class="link-hidden"></a>
                             </div>
 
                         </div>
@@ -400,6 +411,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'domashnee-rabochee-mesto']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -426,6 +438,7 @@
                                      alt="arrow">
                             </a>
                         </div>
+                        <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'garderobnye-komnaty']); ?>" class="link-hidden"></a>
                     </div>
                 </div>
             </div>
@@ -449,6 +462,7 @@
                                      alt="arrow">
                             </a>
                         </div>
+                        <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'detskie']); ?>" class="link-hidden"></a>
                     </div>
                 </div>
             </div>
@@ -472,6 +486,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'gostinye']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -493,6 +508,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'biblioteki']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>
@@ -516,6 +532,7 @@
                                              alt="arrow">
                                     </a>
                                 </div>
+                                <a href="<?php Catalog::getLink(['post_type' => 'catalog_item', 'name' => 'realizovannye-proekty']); ?>" class="link-hidden"></a>
                             </div>
                         </div>
                     </div>

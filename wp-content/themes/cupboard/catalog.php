@@ -124,6 +124,7 @@ Template Name: Шаблон "Каталог"
 
     <?php endforeach;
 
+//  сортируем по ключу
     ksort($position); ?>
 
     <section class="catalog catalog-all mt-90">
@@ -182,9 +183,9 @@ Template Name: Шаблон "Каталог"
                                     <div class="row align-items-end">
                                         <div class="col-lg-4">
                                             <div class="box-height-overflow-h">
-                                                <div class="box-height box-height__350 ffd-column fjc-sb "
+                                                <a href="<?= $item['link']; ?>" class="box-height box-height__350 ffd-column fjc-sb "
                                                      style="background: url(<?= $item['img-1']; ?> ) no-repeat;">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -195,9 +196,9 @@ Template Name: Шаблон "Каталог"
                                                 </h2>
                                             </div>
                                             <div class="box-height-overflow-h">
-                                                <div class="box-height box-height__200 ffd-column fjc-sb "
+                                                <a href="<?= $item['link']; ?>" class="box-height box-height__200 ffd-column fjc-sb "
                                                      style="background: url(<?= $item['img-2']; ?>) no-repeat;">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -211,15 +212,15 @@ Template Name: Шаблон "Каталог"
                                                 </div>
                                             </div>
                                             <div class="box-height-overflow-h">
-                                                <div class="box-height box-height__200 ffd-column fjc-sb "
+                                                <a href="<?= $item['link']; ?>" class="box-height box-height__200 ffd-column fjc-sb "
                                                      style="background: url(<?= $item['img-3']; ?>) no-repeat;">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                            <?php else: ; ?>
+                            <?php else: ?>
 
                                 <!-- 2 Right -->
                                 <div class="col-lg-10 offset-lg-1" id="<?= $item['id-name']; ?>">
@@ -231,9 +232,9 @@ Template Name: Шаблон "Каталог"
                                                 </h2>
                                             </div>
                                             <div class="box-height-overflow-h">
-                                                <div class="box-height box-height__200 ffd-column fjc-sb "
+                                                <a href="<?= $item['link']; ?>" class="box-height box-height__200 ffd-column fjc-sb "
                                                      style="background: url(<?= $item['img-3']; ?>) no-repeat;">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -247,17 +248,17 @@ Template Name: Шаблон "Каталог"
                                                 </div>
                                             </div>
                                             <div class="box-height-overflow-h">
-                                                <div class="box-height box-height__200 ffd-column fjc-sb "
+                                                <a href="<?= $item['link']; ?>" class="box-height box-height__200 ffd-column fjc-sb "
                                                      style="background: url(<?= $item['img-2']; ?>) no-repeat;">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-4">
                                             <div class="box-height-overflow-h">
-                                                <div class="box-height box-height__350 ffd-column fjc-sb "
+                                                <a href="<?= $item['link']; ?>" class="box-height box-height__350 ffd-column fjc-sb "
                                                      style="background: url(<?= $item['img-2']; ?>) no-repeat;">
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
 

@@ -1,8 +1,10 @@
 <?php
+
 /*
 Template Name: Шаблон "Карточка товара"
 Template Post Type: product_item
 */
+
 ?>
 
 <?php get_header(); ?>
@@ -99,7 +101,7 @@ Template Post Type: product_item
 <!-- ############# Menu-sticky end ############### -->
 
 
-<section class="cart mt-90">
+<section class="cart mt-90 mb-60">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -112,14 +114,14 @@ Template Post Type: product_item
                     <li class="fjc-s fai-c">
                         <span class="fjc-c fai-c pl-10 pr-10">—</span>
                         <a href="<?= home_url() ?>/katalog"
-                            class="fs-14 fw-700 link link__default link__default_b">Каталог</a>
+                           class="fs-14 fw-700 link link__default link__default_b">Каталог</a>
                     </li>
 
                     <li class="fjc-s fai-c">
                         <span class="fjc-c fai-c pl-10 pr-10">—</span>
 
                         <a href="<?= home_url() ?>/catalog_item/<?= get_the_category(get_the_ID())[0]->slug ?>"
-                            class="fs-14 fw-700 link link__default link__default_b"><?= get_the_category(get_the_ID())[0]->name; ?></a>
+                           class="fs-14 fw-700 link link__default link__default_b"><?= get_the_category(get_the_ID())[0]->name; ?></a>
                     </li>
 
                     <li class="fjc-s fai-c">
@@ -135,14 +137,15 @@ Template Post Type: product_item
         <div class="row">
             <!-- description item -->
             <div class="col-lg-6">
-                <div>
+                <div class="card-description">
                     <h1 class="title title__h1">
                         <?php Catalog::getTitle(['post_type' => 'product_item', 'name' => get_query_var('name')], 'product_item_title') ?>
                     </h1>
                     <div class="mt-30">
                         <div class="c-red fs-24 fw-700">
                             от
-                            <span><?php
+                            <span>
+                                <?php
                                 // Catalog::getTitle Вывел цену товара
                                 Catalog::getTitle(['post_type' => 'product_item', 'name' => get_query_var('name')], 'product_czena_tovara') ?></span>
                             руб
@@ -181,8 +184,9 @@ Template Post Type: product_item
 
                             <?php if (get_field('product_item_img-' . $count_img)): ?>
 
-                                <a href="<?= get_field('product_item_img-' . $count_img); ?>" data-lightbox="product_item" class="swiper-slide"
-                                     style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></a>
+                                <a href="<?= get_field('product_item_img-' . $count_img); ?>"
+                                   data-lightbox="product_item" class="swiper-slide"
+                                   style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></a>
 
                             <?php endif; ?>
 
@@ -207,7 +211,7 @@ Template Post Type: product_item
                             <?php if (get_field('product_item_img-' . $count_img)): ?>
 
                                 <div class="swiper-slide"
-                                     style="background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></div>
+                                     style="height: 130px; background-image:url(<?= get_field('product_item_img-' . $count_img); ?>)"></div>
 
                             <?php endif; ?>
 
@@ -217,10 +221,61 @@ Template Post Type: product_item
 
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </section>
+
+
+<?php
+
+// Дополнительные товары выводятся по метке (метка - название основного товара)
+$addGoods = new WP_Query;
+
+$posts = $addGoods->query([
+    'post_type' => 'additional_goods',
+    'tag' => get_query_var('name')
+]); ?>
+
+<?php if (!empty($posts)): ?>
+
+<section class="additional-goods mt-60 pb-60">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h2 class="title title__h1 c-red mt-60">С этим товаром часто приобретают:</h2>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="owl-carousel owl-theme" id="gallery-additional-goods">
+                    <?php foreach ($posts as $key): ?>
+
+                        <div class="item">
+                            <div class="additional-goods__box mt-40">
+                                <a href="/<?= $key->post_type; ?>/<?= $key->post_name; ?>">
+                                    <span class="additional-goods__box_img br-1-yellow"
+                                          style="background: url(<?= get_field('product_item_img-1', $key->ID); ?>)"></span>
+                                </a>
+                                <div>
+                                    <div class="c-gray mt-10">
+                                        <?= get_field('product_item_title', $key->ID); ?>
+                                    </div>
+                                    <div class="c-red fw-700 mt-20">
+                                        <?= get_field('product_czena_tovara', $key->ID); ?> руб
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php endif; ?>
 
 <?php get_footer(); ?>
 

@@ -14094,6 +14094,30 @@ $(document).ready(function () {
         }
     });
 
+
+	$('#gallery-additional-goods').owlCarousel({
+		loop: false,
+		margin: 0,
+		nav: true,
+		navText: [],
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
+		fluidSpeed: 500,
+		smartSpeed: 1000,
+		responsive: {
+			0: {
+				items: 2
+			},
+			600: {
+				items: 3
+			},
+			1000: {
+				items: 5
+			}
+		}
+	});
+
     // Main-slider end
 
 
@@ -14295,4 +14319,26 @@ $(document).ready(function () {
 	}
 
 //	Scroll catalog end
+
+
+// calculate modal
+	$('.calculate a').on('click', function () {
+		$('#exampleModalLabel-1').html($(this).html())
+	})
+// calculate modal end
+
+
+//	Submit btn file
+
+	$('.wpcf7 input[type="file"]').on('change', function (e) {
+		if(e.target.files.length){
+			$('.submit-file').html('Загружен ' + e.target.files.length + ' файл : ' + e.target.files[0].name)
+		}
+	});
+
+//	Submit btn file end
+
+	
+
+	
 });

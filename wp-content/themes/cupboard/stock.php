@@ -120,28 +120,27 @@ Template Post Type: post, page
             <div class="row mt-40">
                 <div class="col-lg-6">
                     <div class="box-height-overflow-h">
-                        <div class="box-height box-height__350 ffd-column fjc-sb "
+                        <a href="<?= get_field('stock_link') ?>" class="box-height box-height__350 ffd-column fjc-sb "
                              style="background: url(<?= the_post_thumbnail_url(); ?>) no-repeat;">
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="mt-10">
-                        <h2 class="title title__h2 c-red"><?php the_title(); ?></h2>
+                        <h2 class="title title__h2">
+                            <a href="<?= get_field('stock_link') ?>" class="link link__default link__default_r">
+                                <?php the_title(); ?>
+                            </a>
+                        </h2>
                         <div class="desc desc__sm mt-30">
-                            Фабрика «Дядя Шкаф» была основана в 2002-м году. Основная
-                            наша специализация-изготовление мебели по индивидуальным
-                            размерам в Белгороде. С 2008-го года мы называемся «Ателье
-                            встроенной мебели «Дядя Шкаф» - так был создан бренд,
-                            уже зарекомендовавший себя в роли надежной компании,
-                            производящей качественную мебель в Белгороде
-                            по индивидуальным размерам.
+                            <?= get_the_content(); ?>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="mt-60">
-                                    <a href="<?= get_field('stock_link')?>" class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">
-                                        <?= get_field('description_link')?>
+                                <div class="mt-30">
+                                    <a href="<?= get_field('stock_link') ?>"
+                                       class="button button__red fjc-c fai-c pt-10 pb-10 pl-40 pr-40">
+                                        <?= get_field('description_link') ?>
                                     </a>
                                 </div>
                             </div>
@@ -153,7 +152,7 @@ Template Post Type: post, page
                 </div>
             </div>
 
-        <?php
+            <?php
         endwhile;
         wp_reset_postdata();
         ?>

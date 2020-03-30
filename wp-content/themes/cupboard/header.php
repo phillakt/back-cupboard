@@ -28,6 +28,12 @@
 
         .products .products-line .button {
             margin-top: -20px; }
+
+        .bg-line {
+            background: url(<?= get_template_directory_uri() ?>/img/catalog/full-catalog/catalog-bg-line.svg) !important;
+            background-position: 50% -5% !important;
+            background-repeat-x: no-repeat !important;
+        }
     </style>
 
     <?php wp_head() ?>
